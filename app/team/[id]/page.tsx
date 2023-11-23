@@ -3,13 +3,14 @@ import Link from "next/link";
 
 async function getData(id: string) {
   const response = await fetch(
-    `https://655c87bc25b76d9884fd79b6.mockapi.io/Team/${id}`,
+    `https://655c87bc25b76d9884fd79b6.mockapi.io/Teamr/${id}`,
     {
       next: {
         revalidate: 60,
       },
     }
   );
+  if (!response.ok) throw new Error("Unable to fetch posts!");
   return response.json();
 }
 

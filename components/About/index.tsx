@@ -8,7 +8,10 @@ const About: FC = () => {
   return (
     <section
       className={styles.about}
-      style={{ backgroundImage: "url(/images/private-bg.jpg)" }}>
+      style={{
+        backgroundImage: "url(/images/private-bg.jpg)",
+        backgroundSize: "cover",
+      }}>
       <div className={styles.about__inner}>
         <div className={styles.about__box}>
           <h3 className={styles.boxTitle}>ABOUT US</h3>

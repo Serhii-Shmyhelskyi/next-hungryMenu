@@ -21,7 +21,10 @@ export default async function Team() {
   return (
     <div
       className={styles.team}
-      style={{ backgroundImage: "url(/images/our-bg.jpg)" }}>
+      style={{
+        backgroundImage: "url(/images/our-bg.jpg)",
+        backgroundSize: "cover",
+      }}>
       <h1>Our Team</h1>
       <ul>
         {posts.map((post: any) => (

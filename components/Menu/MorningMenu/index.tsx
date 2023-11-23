@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import styles from "./MorningMenu.module.scss";
+import styles from "./morningMenu.module.scss";
 
 let morningMenuarr = [
   {

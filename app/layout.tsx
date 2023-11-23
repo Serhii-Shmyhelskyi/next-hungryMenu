@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 
-// import { Open_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import "./globals.scss";
 
 import { Header } from "../components/Header/index";
 import { Footer } from "../components/Footer/index";
 
-// const OpenSans = Open_Sans({ weight: ["400", "700", "800"] });
+const roboto = Roboto({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Hungry",
@@ -26,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* className={OpenSans.className} */}
+      className={roboto.className}
       <body>
         <div className="container">
           <Header />

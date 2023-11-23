@@ -9,9 +9,6 @@ import { Footer } from "../components/Footer/index";
 
 const roboto = Roboto({
   weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,8 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      className={roboto.className}
+    <html lang="en" className={roboto.className}>
       <body>
         <div className="container">
           <Header />

@@ -16,7 +16,7 @@ const Team: FC = () => {
         sunt id ipsam quidem esse eaque voluptates obcaecati vero! Ratione,
         veritatis voluptatibus?
       </p>
-      <div>
+      <div className={styles.menuImgBox}>
         <Link href="/menu/morningMenu">
           <img
             className={styles.menu__images}
@@ -24,6 +24,7 @@ const Team: FC = () => {
             alt="MenuImg"
           />
         </Link>
+
         <Link href="/menu/dailyMenu">
           <img
             className={styles.menu__images}

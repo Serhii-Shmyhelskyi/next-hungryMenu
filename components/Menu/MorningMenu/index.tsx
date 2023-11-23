@@ -4,7 +4,7 @@ import styles from "./morningMenu.module.scss";
 
 let morningMenuarr = [
   {
-    text: " MORNING MENU  FLOW",
+    text: " MORNING MENU y",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "42 USD",
     href: "/images/gallery-4.jpg",

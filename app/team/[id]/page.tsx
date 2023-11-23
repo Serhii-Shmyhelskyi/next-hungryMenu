@@ -3,7 +3,7 @@ import Link from "next/link";
 
 async function getData(id: string) {
   const response = await fetch(
-    `https://655c87bc25b76d9884fd79b6.mockapi.io/Teamr/${id}`,
+    `https://655c87bc25b76d9884fd79b6.mockapi.io/Team/${id}`,
     {
       next: {
         revalidate: 60,

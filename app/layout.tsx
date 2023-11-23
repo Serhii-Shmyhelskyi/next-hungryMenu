@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
-import { Open_Sans } from "next/font/google";
+// import { Open_Sans } from "next/font/google";
 
 import "./globals.scss";
 
 import { Header } from "../components/Header/index";
 import { Footer } from "../components/Footer/index";
 
-const OpenSans = Open_Sans({ weight: ["400", "700", "800"] });
+// const OpenSans = Open_Sans({ weight: ["400", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "Hungry",
@@ -26,7 +26,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={OpenSans.className}>
+      {/* className={OpenSans.className} */}
+      <body>
         <div className="container">
           <Header />
           <main>{children}</main>

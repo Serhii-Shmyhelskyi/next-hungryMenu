@@ -15,21 +15,21 @@
   }
   .menu__images {
     max-width: 500px;
-    margin: 20px;
+    margin: 30px;
     border-radius: 40px;
     transition: all 0.1s ease-in-out;
     &:active {
       scale: 1.08;
       border: 2px solid #ffdf3e;
       background: #1c1b1b;
-      box-shadow: 5px rgb(218, 245, 46);
+      box-shadow: 10px 5px 5px 5px rgb(218, 245, 46);
     }
     @media (hover: hover) {
       &:hover {
         scale: 1.08;
         border: 2px solid #ffdf3e;
         background: #1c1b1b;
-        box-shadow: 5px rgb(218, 245, 46);
+        box-shadow: 10px 5px 5px 5px rgb(218, 245, 46);
       }
     }
   }

@@ -12,14 +12,13 @@
   .team__wraper {
     display: grid;
     width: 100%;
-    height: 720px;
     grid-gap: 10px 10px;
     padding: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: repeat(2, 1fr);
+    grid-auto-rows: auto;
     .teamLink {
       width: 250px;
-      margin: 0 auto;
+      margin: 30px auto 90px auto;
     }
     .team__wraperOne {
       display: inline-block;
@@ -34,16 +33,14 @@
       transition: all 0.1s ease-in-out;
       &:active {
         scale: 1.08;
-        border: 2px solid #ffdf3e;
         background: #1c1b1b;
-        box-shadow: 10px 5px 5px rgb(218, 245, 46);
+        box-shadow: 10px 5px 5px 5px rgb(218, 245, 46);
       }
       @media (hover: hover) {
         &:hover {
           scale: 1.08;
-          border: 2px solid #ffdf3e;
           background: #1c1b1b;
-          box-shadow: 10px 5px 5px rgb(218, 245, 46);
+          box-shadow: 10px 5px 5px 5px rgb(218, 245, 46);
         }
       }
       img {
@@ -54,6 +51,35 @@
       }
       p {
         padding: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .team {
+    height: 100%;
+    .team__wraper {
+      grid-template-columns: repeat(2, 1fr);
+      .team__wraperOne {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .team {
+    .team__wraper {
+      grid-template-columns: repeat(1, 1fr);
+      .teamLink {
+        margin: 10px auto 20px auto;
+      }
+      .team__wraperOne {
+        width: 200px;
+        height: 200px;
+        img {
+          width: 100px;
+        }
       }
     }
   }

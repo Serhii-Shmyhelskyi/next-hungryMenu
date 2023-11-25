@@ -8,7 +8,7 @@ export default function Home() {
         <div
           className="home__top"
           style={{ backgroundImage: "url(/images/headerBg.jpg)" }}>
-          <div className="home__inner">
+          <div className="home__inner container">
             <div className="home__logo">
               <img className="home__logo-img" src="images/home-logo.png" />
             </div>

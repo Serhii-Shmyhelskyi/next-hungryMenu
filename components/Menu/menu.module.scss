@@ -1,7 +1,11 @@
 .menu {
   background-color: rgb(71, 53, 34);
   text-align: center;
-  height: 672px;
+  height: 100vh;
+  .menu__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   p {
     padding: 0 10px;
   }

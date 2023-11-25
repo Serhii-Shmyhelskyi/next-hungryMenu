@@ -2,8 +2,8 @@
 
 export default function ErrorWrapper({ error }: { error: Error }) {
   return (
-    <div>
-      <h1 style={{ color: "black", textAlign: "center" }}>
+    <div style={{ height: 700 }}>
+      <h1 style={{ textAlign: "center", height: 700 }}>
         Opps!!! {error.message}
       </h1>
     </div>

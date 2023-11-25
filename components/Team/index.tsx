@@ -8,6 +8,7 @@ type postType = {
   id: number;
   name: string;
   text: string;
+  imageUrl: string;
 };
 
 async function getData() {
@@ -19,6 +20,7 @@ async function getData() {
       },
     }
   );
+  if (!response.ok) throw new Error("Unable to fetch posts!");
   return response.json();
 }
 
@@ -31,14 +33,23 @@ export default async function Team() {
         backgroundImage: "url(/images/our-bg.jpg)",
         backgroundSize: "cover",
       }}>
-      <h1>Our Team</h1>
-      <ul>
-        {posts.map((post: postType) => (
-          <li key={post.id}>
-            <Link href={`team/${post.id}`}>{post.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.team__container}>
+        <h1>OUR TEAM</h1>
+        <div className={styles.team__wraper}>
+          {posts.map((post: postType) => (
+            <Link
+              className={styles.teamLink}
+              key={post.id}
+              href={`team/${post.id}`}>
+              <div className={styles.team__wraperOne}>
+                <h3>{post.name}</h3>
+                <img src={`${post.imageUrl}.png`} alt="photoTeam" />
+                <p>Proffesion</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -38,12 +38,13 @@ export async function generateMetadata({
 export default async function Post({ params: { id } }: Props) {
   const post: postType = await getData(id);
   return (
-    <>
+    <div className="postTeam">
       <h1>{post.name}</h1>
+
       <p>{post.text}</p>
       <li>
         <Link href="/team">Back</Link>
       </li>
-    </>
+    </div>
   );
 }

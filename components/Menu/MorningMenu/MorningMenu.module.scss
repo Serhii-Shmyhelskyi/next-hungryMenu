@@ -1,6 +1,10 @@
 .menu {
   color: #fff;
 }
+.menu__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 .menu__box {
   max-width: 565px;
@@ -54,13 +58,13 @@
 }
 
 .menu__boxTitleContent {
-  font-family: "Banny-light";
+  // font-family: "Banny-light";
   font-size: 18px;
   line-height: 20px;
 }
 
 .menu__boxText {
-  font-family: "OpenSans-Regular";
+  // font-family: "OpenSans-Regular";
   font-size: 12px;
   line-height: 18px;
 }

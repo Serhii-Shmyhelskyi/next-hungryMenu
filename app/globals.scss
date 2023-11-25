@@ -63,7 +63,7 @@ body {
   font-size: 18px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.9);
-  background-color: antiquewhite;
+  background-color: rgb(61, 56, 50);
 }
 
 .container {
@@ -405,3 +405,12 @@ template {
 }
 
 /*  */
+
+.postTeam {
+  background: #000;
+  height: 800px;
+  h1 {
+    margin: 0;
+    padding: 25px 0;
+  }
+}

@@ -1,8 +1,8 @@
 .header__innerMenu {
   background-color: #eed56e;
   padding: 10px 0;
-  margin: 10px 0 0 0;
-  border-radius: 20px 20px 0 0;
+  // margin: 10px 0 0 0;
+  // border-radius: 20px 20px 0 0;
 }
 
 .headerMenu__content {
@@ -41,14 +41,14 @@
     }
   }
   li {
-    &:hover {
-      color: #fff;
-      background-color: #545252;
-      border-radius: 50px;
-    }
-    h3 {
+    @media (hover: hover) {
       &:hover {
         color: #fff;
+        background-color: #545252;
+        border-radius: 50px;
+        h3 {
+          color: #fff;
+        }
       }
     }
   }
@@ -128,8 +128,11 @@
         background-color: #545252;
         border: 2px solid #a88d07;
       }
-      .active:hover {
-        background-color: #3a3939;
+      @media (hover: hover) {
+        .active:hover {
+          background-color: #3a3939;
+          color: #a88d07;
+        }
       }
 
       @media (hover: hover) {

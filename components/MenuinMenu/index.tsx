@@ -10,7 +10,7 @@ export default function MenuinMenuComponent() {
   return (
     <>
       <div className={styles.menu}>
-        <h1 className={styles.menu__title}>Menu:</h1>
+        <h1 className={styles.menu__title}>MENU</h1>
         <ul className={styles.menuLi}>
           <Link href="/menu/morningMenu">
             <li

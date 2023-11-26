@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import "../scss/style.scss";
 
 export default function Home() {
@@ -23,10 +24,14 @@ export default function Home() {
                 <h1 className="home__title">HUNGRY PEOPLE</h1>
                 <div className="heder__title-bottom line-bottom"></div>
                 <div className="home__buttons">
-                  <button className="home__button home__buttonActive">
-                    BOOK TABLE
-                  </button>
-                  <button className="home__button">EXPLORE</button>
+                  <Link href="/booking">
+                    <button className="home__button home__buttonActive">
+                      BOOK TABLE
+                    </button>
+                  </Link>
+                  <Link href="/menu">
+                    <button className="home__button">MENU</button>
+                  </Link>
                 </div>
                 <div className="home__buttons-down">
                   <div className="home__button-down">

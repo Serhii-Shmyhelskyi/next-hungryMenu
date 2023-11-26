@@ -12,20 +12,20 @@ export default function MenuinMenuComponent() {
       <div className={styles.menu}>
         <h1 className={styles.menu__title}>MENU</h1>
         <ul className={styles.menuLi}>
-          <Link href="/menu/morningMenu">
-            <li
-              className={classnames({
-                [styles.active]: isActiveMenu("/menu/morningMenu"),
-              })}>
-              Morning menu
-            </li>
-          </Link>
           <Link href="/menu/dailyMenu">
             <li
               className={classnames({
                 [styles.active]: isActiveMenu("/menu/dailyMenu"),
               })}>
-              Daily menu
+              to eat
+            </li>
+          </Link>
+          <Link href="/menu/drinkMenu">
+            <li
+              className={classnames({
+                [styles.active]: isActiveMenu("/menu/drinkMenu"),
+              })}>
+              to drink
             </li>
           </Link>
         </ul>

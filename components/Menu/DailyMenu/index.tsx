@@ -3,99 +3,7 @@
 import React, { FC, useState } from "react";
 
 import styles from "./dailyMenu.module.scss";
-
-let dailyMenuarr = [
-  {
-    text: "FISH",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu1.jpg",
-  },
-  {
-    text: "POZOLE",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu2.jpg",
-  },
-  {
-    text: "STEAK",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu3.jpg",
-  },
-  {
-    text: "GRILLED FISH",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu4.jpg",
-  },
-  {
-    text: "DRY SQUID",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu5.jpg",
-  },
-  {
-    text: "SEA BASS",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu6.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu7.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu8.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu9.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu10.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu11.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu12.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu13.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu14.jpg",
-  },
-  {
-    text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "56 USD",
-    href: "/images/dailyMenu15.jpg",
-  },
-];
+import { dailyMenuarr } from "@/components/data/data";
 
 const DailyMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
@@ -158,7 +66,7 @@ const DailyMenuComponent: FC = () => {
             )}
           </div>
           <div className={styles.menu__box}>
-            <h3 className={styles.boxTitle}>DailyMenu</h3>
+            <h3 className={styles.boxTitle}>to eat</h3>
             <h4 className={styles.boxTitle2}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
               velit maximus, molestie est a, tempor magna.

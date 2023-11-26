@@ -1,84 +1,10 @@
 "use client";
 import React, { FC, useState } from "react";
 
-import styles from "./MorningMenu.module.scss";
+import styles from "./morningMenu.module.scss";
+import { morningMenuarr } from "@/components/data/data";
 
-let morningMenuarr = [
-  {
-    text: "AMERICAN BREAKFAST",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu1.jpg",
-  },
-  {
-    text: "IRISH BREAKFAST",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu2.jpg",
-  },
-  {
-    text: "CHINESE BREAKFAST",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu3.jpg",
-  },
-  {
-    text: "SYRNIKI",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "6 USD",
-    href: "/images/morningMenu4.jpg",
-  },
-  {
-    text: "DRY SQUID",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "3 USD",
-    href: "/images/morningMenu5.jpg",
-  },
-  {
-    text: "TOAST WITH EGG",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "4 USD",
-    href: "/images/morningMenu6.jpg",
-  },
-  {
-    text: " MORNING CHEESE",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "6 USD",
-    href: "/images/morningMenu7.jpg",
-  },
-  {
-    text: "TOAST WITH MEAT",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "3 USD",
-    href: "/images/morningMenu8.jpg",
-  },
-  {
-    text: "MORNING SOUP",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "3 USD",
-    href: "/images/morningMenu9.jpg",
-  },
-  {
-    text: "CROISSANT WITH MEAT",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu10.jpg",
-  },
-  {
-    text: "ROYAL CROISSANT",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu11.jpg",
-  },
-  {
-    text: "CROISSANT WITH CHEESE",
-    about: " Integer ullamcorper neque eu purus euismod",
-    price: "5 USD",
-    href: "/images/morningMenu12.jpg",
-  },
-];
-
-const MorningMenuComponent: FC = () => {
+const DrinkMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
   let sortMorningMenu = morningMenuarr.filter((post) =>
     post.text.toLowerCase().includes(search.toLowerCase())
@@ -140,7 +66,7 @@ const MorningMenuComponent: FC = () => {
             )}
           </div>
           <div className={styles.menu__box}>
-            <h3 className={styles.boxTitle}>MorningMenu</h3>
+            <h3 className={styles.boxTitle}>to drink</h3>
             <h4 className={styles.boxTitle2}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
               velit maximus, molestie est a, tempor magna.
@@ -165,4 +91,4 @@ const MorningMenuComponent: FC = () => {
   );
 };
 
-export default MorningMenuComponent;
+export default DrinkMenuComponent;

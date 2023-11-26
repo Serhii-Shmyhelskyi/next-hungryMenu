@@ -88,13 +88,6 @@ const MorningMenuComponent: FC = () => {
     <section className={styles.menu}>
       <div className={styles.menu__container}>
         <div className={styles.menu__inner}>
-          <div className={styles.menu__box}>
-            <h3 className={styles.boxTitle}>MorningMenu</h3>
-            <h4 className={styles.boxTitle2}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
-              velit maximus, molestie est a, tempor magna.
-            </h4>
-          </div>
           <div className={styles.search}>
             <svg
               className={styles.search_icon}
@@ -146,6 +139,14 @@ const MorningMenuComponent: FC = () => {
               </svg>
             )}
           </div>
+          <div className={styles.menu__box}>
+            <h3 className={styles.boxTitle}>MorningMenu</h3>
+            <h4 className={styles.boxTitle2}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+              velit maximus, molestie est a, tempor magna.
+            </h4>
+          </div>
+
           <div className={styles.menu__content}>
             {sortMorningMenu.map((obj, i) => {
               return (

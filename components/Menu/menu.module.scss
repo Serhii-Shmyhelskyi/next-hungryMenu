@@ -35,7 +35,7 @@
   }
 }
 
-@media (max-width: 1085px) {
+@media (max-width: 1130px) {
   .menu {
     .menuImgBox {
       margin-top: 40px;
@@ -56,14 +56,21 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 835px) {
   .menu {
     height: 100%;
     .menuImgBox {
       margin-top: 10px;
     }
     .menu__images {
-      width: 320px;
+      width: 400px;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .menu {
+    .menu__images {
+      width: 325px;
     }
   }
 }

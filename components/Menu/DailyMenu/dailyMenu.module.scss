@@ -9,7 +9,7 @@
 
 .menu__box {
   max-width: 565px;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
 }
 .menu__position-box {
   display: flex;
@@ -43,6 +43,7 @@
   border-radius: 40px;
   img {
     width: 250px;
+    height: 250px;
     border-radius: 50%;
   }
   h4 {
@@ -50,6 +51,48 @@
   }
   p {
     padding: 5px;
+  }
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 auto 30px auto;
+  @media (max-width: 600px) {
+    width: 250px;
+  }
+  .searchInput {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 20px;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 42px;
+    transition: all 0.15s ease-in-out;
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 600px) {
+      width: 250px;
+    }
+  }
+  .search_icon {
+    height: 22px;
+    opacity: 0.3;
+    position: absolute;
+    width: 22px;
+    top: 12px;
+    left: 10px;
+  }
+  .clearIcon {
+    width: 18px;
+    opacity: 0.3;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -83,4 +126,10 @@
   line-height: 28px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media (max-width: 520px) {
+  .menu__contentBox {
+    width: 325px;
+  }
 }

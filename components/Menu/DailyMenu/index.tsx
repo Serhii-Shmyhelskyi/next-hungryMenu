@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
 
 import styles from "./dailyMenu.module.scss";
 
@@ -132,6 +134,10 @@ let dailyMenuarr = [
 ];
 
 const DailyMenuComponent: FC = () => {
+  const [search, setSearch] = useState("");
+  let sortDailyMenu = dailyMenuarr.filter((post) =>
+    post.text.toLowerCase().includes(search)
+  );
   return (
     <section className={styles.menu}>
       <div className={styles.menu__container}>
@@ -143,8 +149,17 @@ const DailyMenuComponent: FC = () => {
               velit maximus, molestie est a, tempor magna.
             </h4>
           </div>
+          <form>
+            <input
+              type="search"
+              placeholder="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+            <button>push</button>
+          </form>
           <div className={styles.menu__content}>
-            {dailyMenuarr.map((obj, i) => {
+            {sortDailyMenu.map((obj, i) => {
               return (
                 <div className={styles.menu__contentBox}>
                   <h4 className={styles.menu__boxTitleContent}>{obj.text}</h4>

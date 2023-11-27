@@ -54,7 +54,7 @@
 
 .search {
   position: relative;
-  width: 400px;
+  width: 340px;
   margin: 0 auto 30px auto;
   @media (max-width: 600px) {
     width: 250px;
@@ -80,14 +80,14 @@
     position: absolute;
     width: 22px;
     top: 12px;
-    left: 35px;
+    left: 10px;
   }
   .clearIcon {
     width: 18px;
     opacity: 0.3;
     position: absolute;
     top: 12px;
-    right: 40px;
+    right: 15px;
     &:hover {
       cursor: pointer;
     }
@@ -127,8 +127,47 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 1290px) {
+  .searchPosition {
+    position: absolute;
+    top: 23px;
+    left: 40px;
+    .search {
+      width: 90px;
+      .searchInput {
+        width: 90px;
+        padding-left: 20px;
+        &:active {
+          width: 340px;
+        }
+        &:focus {
+          width: 340px;
+        }
+      }
+      .search_icon {
+        left: 0;
+      }
+      .clearIcon {
+        right: -240px;
+      }
+    }
+  }
+}
+
 @media (max-width: 520px) {
   .menu__contentBox {
     width: 300px;
+  }
+  .searchPosition {
+    .search {
+      .searchInput {
+        &:active {
+          width: 240px;
+        }
+        &:focus {
+          width: 240px;
+        }
+      }
+    }
   }
 }

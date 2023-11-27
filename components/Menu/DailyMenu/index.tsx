@@ -74,19 +74,26 @@ const DailyMenuComponent: FC = () => {
               velit maximus, molestie est a, tempor magna.
             </h4>
           </div>
-
-          <div className={styles.menu__content}>
-            {sortDailyMenu.map((obj, i) => {
-              return (
-                <div className={styles.menu__contentBox}>
-                  <h4 className={styles.menu__boxTitleContent}>{obj.text}</h4>
-                  <img src={obj.href} alt="menu_img" />
-                  <h4>{obj.price}</h4>
-                  <p className={styles.menu__boxText}>{obj.about}</p>
-                </div>
-              );
-            })}
-          </div>
+          {Object.keys(sortDailyMenu).length == 0 ? (
+            <div style={{ height: "100vh" }}>
+              <h3>Sorry we dont have this dished</h3>
+              <h2>make the second choice</h2>
+              <img src="/images/ops2.png" alt="Ops" />
+            </div>
+          ) : (
+            <div className={styles.menu__content}>
+              {sortDailyMenu.map((obj, i) => {
+                return (
+                  <div key={i} className={styles.menu__contentBox}>
+                    <h4 className={styles.menu__boxTitleContent}>{obj.text}</h4>
+                    <img src={obj.href} alt="menu_img" />
+                    <h4>{obj.price}</h4>
+                    <p className={styles.menu__boxText}>{obj.about}</p>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>

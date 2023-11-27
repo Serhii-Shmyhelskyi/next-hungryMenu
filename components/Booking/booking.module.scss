@@ -84,7 +84,6 @@
 .thamks {
   text-align: center;
   height: 100vh;
-  // background-image: url(./images/private-bg.jpg);
   h2 {
     padding: 50px 0 20px 0;
   }
@@ -99,5 +98,48 @@
     height: 30px;
     background-color: #e8c300;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1290px) {
+  .book {
+    text-align: center;
+    .book__inner {
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+    .book__box {
+      max-width: 580px;
+      margin: 0 auto;
+      text-align: center;
+      .book__boxTitle {
+        margin: 0 auto 20px;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 660px) {
+  .book {
+    height: 100%;
+    .book__box {
+      max-width: 380px;
+    }
+    .book__input {
+      height: 40px;
+    }
+    .book__button {
+      width: 278px;
+      height: 40px;
+      line-height: 0;
+    }
+    .book__images {
+      margin: 0;
+      padding: 20px 0;
+      img {
+        width: 300px;
+      }
+    }
   }
 }

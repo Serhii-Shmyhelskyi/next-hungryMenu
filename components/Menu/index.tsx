@@ -23,14 +23,14 @@ const Team: FC = () => {
           <Link href="/menu/drinkMenu">
             <img
               className={styles.menu__images}
-              src="images/gallery-3-big.jpg"
+              src="images/daylyMenu.jpg"
               alt="MenuImg"
             />
           </Link>
           <Link href="/menu/dailyMenu">
             <img
               className={styles.menu__images}
-              src="images/gallery-2-big.jpg"
+              src="images/drinkMenu.jpg"
               alt="MenuImg"
             />
           </Link>

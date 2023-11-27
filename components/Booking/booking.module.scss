@@ -38,7 +38,7 @@
   text-indent: 20px;
   color: rgb(0, 0, 0);
   &::placeholder {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0, 0.5);
     font-family: "OpenSans-Regular";
     font-size: 14px;
     line-height: 19px;
@@ -48,16 +48,6 @@
 
 .book__select {
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 9px;
-    right: 25px;
-    top: 45%;
-    z-index: 5;
-    // background-image: url(../images/arrow_custom.svg);
-  }
 }
 
 .book__button {
@@ -136,7 +126,7 @@
     }
     .book__images {
       margin: 0;
-      padding: 20px 0;
+      padding: 65px 0;
       img {
         width: 300px;
       }

@@ -110,8 +110,8 @@ const Booking: FC = () => {
                   <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
-                      type="date"
-                      placeholder="date"
+                      type="text"
+                      placeholder="Date (mm/dd)"
                       required
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
@@ -120,12 +120,10 @@ const Booking: FC = () => {
                   <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
-                      type="time"
-                      placeholder="time"
+                      type="text"
+                      placeholder="Time (hh:mm)"
                       id="appt"
                       name="appt"
-                      min="12:00"
-                      max="20:00"
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
                     />

@@ -3,6 +3,7 @@ import React, { FC, useState } from "react";
 
 import styles from "./drinkMenu.module.scss";
 import { morningMenuarr } from "@/components/data/data";
+import classnames from "classnames";
 
 const DrinkMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
@@ -50,7 +51,10 @@ const DrinkMenuComponent: FC = () => {
                 />
               </svg>
               <input
-                className={styles.searchInput}
+                className={classnames({
+                  [styles.searchInput]: search,
+                  [styles.searchInputDont]: !search,
+                })}
                 type="text"
                 placeholder="Search"
                 value={search}

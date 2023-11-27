@@ -3,6 +3,7 @@ import React, { FC, useState } from "react";
 
 import styles from "./dailyMenu.module.scss";
 import { dailyMenuarr } from "@/components/data/data";
+import classnames from "classnames";
 
 const DailyMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
@@ -49,7 +50,10 @@ const DailyMenuComponent: FC = () => {
                 />
               </svg>
               <input
-                className={styles.searchInput}
+                className={classnames({
+                  [styles.searchInput]: search,
+                  [styles.searchInputDont]: !search,
+                })}
                 type="text"
                 placeholder="Search"
                 value={search}

@@ -56,7 +56,7 @@
 
 .search {
   position: relative;
-  width: 400px;
+  width: 340px;
   margin: 0 auto 30px auto;
   @media (max-width: 600px) {
     width: 250px;
@@ -64,7 +64,7 @@
   .searchInput {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 12px 20px;
-    width: 400px;
+    width: 340px;
     border-radius: 10px;
     font-size: 16px;
     padding-left: 42px;
@@ -82,14 +82,14 @@
     position: absolute;
     width: 22px;
     top: 12px;
-    left: 10px;
+    left: 35px;
   }
   .clearIcon {
     width: 18px;
     opacity: 0.3;
     position: absolute;
     top: 12px;
-    right: 10px;
+    right: 40px;
     &:hover {
       cursor: pointer;
     }
@@ -100,6 +100,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  line-height: 1;
 }
 
 .menu__boxTitleContent {
@@ -126,6 +127,33 @@
   line-height: 28px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1290px) {
+  .searchPosition {
+    position: absolute;
+    top: 23px;
+    left: 460px;
+    .search {
+      width: 50px;
+      .searchInput {
+        width: 50px;
+        padding-left: 20px;
+        &:active {
+          width: 340px;
+        }
+        &:focus {
+          width: 340px;
+        }
+      }
+      .search_icon {
+        left: 0;
+      }
+      .clearIcon {
+        right: -280px;
+      }
+    }
+  }
 }
 
 @media (max-width: 520px) {

@@ -62,7 +62,7 @@
   .searchInput {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 12px 20px;
-    width: 400px;
+    width: 340px;
     border-radius: 10px;
     font-size: 16px;
     padding-left: 42px;
@@ -80,14 +80,14 @@
     position: absolute;
     width: 22px;
     top: 12px;
-    left: 10px;
+    left: 35px;
   }
   .clearIcon {
     width: 18px;
     opacity: 0.3;
     position: absolute;
     top: 12px;
-    right: 10px;
+    right: 40px;
     &:hover {
       cursor: pointer;
     }
@@ -98,6 +98,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  line-height: 1;
 }
 
 .menu__boxTitleContent {

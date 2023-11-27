@@ -1,7 +1,7 @@
 "use client";
 import React, { FC, useState } from "react";
 
-import styles from "./morningMenu.module.scss";
+import styles from "./drinkMenu.module.scss";
 import { morningMenuarr } from "@/components/data/data";
 
 const DrinkMenuComponent: FC = () => {

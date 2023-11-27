@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { pageUp } from "../../function/function";
 import classnames from "classnames";

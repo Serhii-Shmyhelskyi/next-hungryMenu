@@ -1,13 +1,46 @@
 "use client";
-
 import React, { FC, useState } from "react";
 
 import styles from "./booking.module.scss";
+import Link from "next/link";
 
 const Booking: FC = () => {
-  let [fullData, useFullData] = useState({ name: "Fill", age: "18" });
+  const [visible, setVisible] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [people, setPeople] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
 
-  let postData = async () => {
+  let addVisible = () => {
+    setVisible(true);
+  };
+
+  let addNewGests = async (e: any) => {
+    e.preventDefault();
+    const allData = {
+      // якщо локально
+      // id: Date.now(),
+      name,
+      email,
+      phone,
+      people,
+      date,
+      time,
+    };
+    // оновлення сайту чере 0,5 с, після добавлянная поста
+    // setTimeout(function () {
+    //   location.reload();
+    // }, 500);
+    // очистка  useState
+    setVisible(false);
+    // setName("");
+    // setEmail("");
+    // setPhone("");
+    // setPeople("");
+    // setDate("");
+    // setTime("");
     try {
       await fetch(`https://655c87bc25b76d9884fd79b6.mockapi.io/data`, {
         method: "POST",
@@ -15,46 +48,121 @@ const Booking: FC = () => {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(fullData),
+        body: JSON.stringify(allData),
       });
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
-    <section
-      className={styles.about}
-      style={{
-        backgroundImage: "url(/images/private-bg.jpg)",
-        backgroundSize: "cover",
-      }}>
-      <div className={styles.about__container}>
-        <div className={styles.about__inner}>
-          <div className={styles.about__box}>
-            <h3 className={styles.boxTitle}>ABOUT US</h3>
-            <h4 className={styles.boxTitle2}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
-              velit maximus, molestie est a, tempor magna.
-            </h4>
-            <p className={styles.about__boxText}>
-              Integer ullamcorper neque eu purus euismod, ac faucibus mauris
-              posuere. Morbi non ultrices ligula. Sed dictum, enim sed
-              ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem
-              quam nec sem. Mauris tincidunt feugiat diam convallis pharetra.
-              Nulla facilisis semper laoreet.
-            </p>
+    <>
+      {visible ? (
+        <section
+          className={styles.book}
+          style={{
+            backgroundImage: "url(/images/private-bg.jpg)",
+            backgroundSize: "cover",
+          }}>
+          <div className={styles.book__inner}>
+            <div className={styles.book__box}>
+              <h3 className={styles.book__boxTitle}>BOOK A TABLE</h3>
+              <div className={styles.book__boxBottom}></div>
+              <div className={styles.book__inputs}>
+                <div className={styles.book__inputInner}>
+                  <div className={styles.input__inner}>
+                    <input
+                      className={styles.book__input}
+                      type="text"
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                  <div className={styles.book__select}>
+                    <input
+                      className={styles.book__input}
+                      type="text"
+                      placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div className={styles.book__select}>
+                    <input
+                      className={styles.book__input}
+                      type="tel"
+                      placeholder="Phone +380-00-0000-000"
+                      required
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                    />
+                  </div>
+                  <div className={styles.book__select}>
+                    <input
+                      className={styles.book__input}
+                      type="number"
+                      placeholder="Number of People"
+                      value={people}
+                      onChange={(e) => setPeople(e.target.value)}
+                    />
+                  </div>
+                  <div className={styles.book__select}>
+                    <input
+                      className={styles.book__input}
+                      type="date"
+                      required
+                      value={date}
+                      onChange={(e) => setDate(e.target.value)}
+                    />
+                  </div>
+                  <div className={styles.book__select}>
+                    <input
+                      className={styles.book__input}
+                      type="time"
+                      id="appt"
+                      name="appt"
+                      min="12:00"
+                      max="20:00"
+                      value={time}
+                      onChange={(e) => setTime(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button className={styles.book__button} onClick={addNewGests}>
+                BOOK NOW
+              </button>
+            </div>
+            <div className={styles.book__images}>
+              <img
+                className={styles.book__imagesImg}
+                src="images/book.png"
+                alt="bookImg"
+              />
+            </div>
           </div>
-          <div className={styles.about__images}>
-            <img
-              onClick={() => postData()}
-              className={styles.about__imagesImg + "" + styles.contentImages}
-              src="images/about.png"
-              alt="About"
-            />
+        </section>
+      ) : (
+        <div
+          className={styles.thamks}
+          style={{
+            backgroundImage: "url(/images/private-bg.jpg)",
+            backgroundSize: "cover",
+          }}>
+          <h2>Thank's {name} for your reservation </h2>
+          <div>
+            <img src="/images/gallery-6.jpg" alt="thank" />
           </div>
+
+          <Link href="/">
+            <button className={styles.book__button} onClick={addVisible}>
+              HOME
+            </button>
+          </Link>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 

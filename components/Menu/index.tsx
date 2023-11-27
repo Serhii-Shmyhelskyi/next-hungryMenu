@@ -1,5 +1,4 @@
 "use client";
-
 import React, { FC } from "react";
 
 import styles from "./menu.module.scss";
@@ -21,14 +20,13 @@ const Team: FC = () => {
           veritatis voluptatibus?
         </p>
         <div className={styles.menuImgBox}>
-          <Link href="/menu/morningMenu">
+          <Link href="/menu/drinkMenu">
             <img
               className={styles.menu__images}
               src="images/gallery-3-big.jpg"
               alt="MenuImg"
             />
           </Link>
-
           <Link href="/menu/dailyMenu">
             <img
               className={styles.menu__images}

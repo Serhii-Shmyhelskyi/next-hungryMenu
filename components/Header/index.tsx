@@ -1,35 +1,13 @@
 "use client";
 import Link from "next/link";
-import { pageUp } from "../../function/function";
 import classnames from "classnames";
 import styles from "./header.module.scss";
 import React, { useState, FC } from "react";
 import { usePathname } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 
-// type menuItem1 = {
-//   style: string;
-//   href: string;
-//   text: string;
-// };
-// type menuItem2 = {
-//   style: string;
-//   href: string;
-//   text: string;
-// };
-
-let dataMenu1 = [
-  { href: "/", text: "HOME" },
-  { href: "/about", text: "ABOUT" },
-  { href: "/team", text: "TEAM" },
-  { href: "/booking", text: "BOOKING" },
-];
-
-let dataMenu2 = [
-  { href: "/menu", text: "MENU" },
-  { href: "/galerie", text: "GALERIE" },
-  { href: "/events", text: "EVENTS" },
-  { href: "/contact", text: "CONTACT" },
-];
+import { pageUp } from "../../function/function";
+import { dataMenu1, dataMenu2 } from "../data/data";
 
 const Header: FC = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
@@ -44,6 +22,8 @@ const Header: FC = () => {
   const pathname = usePathname();
 
   let isActiveMenu = (obj: string) => pathname === obj;
+
+  const session = useSession();
 
   return (
     <>
@@ -110,6 +90,44 @@ const Header: FC = () => {
                     </Link>
                   );
                 })}
+                {session?.data && (
+                  <Link href="/profile">
+                    <li>
+                      <h3>PROFILE</h3>
+                    </li>
+                  </Link>
+                )}
+                {session?.data ? (
+                  <Link href="#" onClick={() => signOut({ callbackUrl: "/" })}>
+                    <li>
+                      <h3>SING OUT</h3>
+                    </li>
+                  </Link>
+                ) : (
+                  <Link href="/api/auth/signin">
+                    <li>
+                      <h3>SING IN</h3>
+                    </li>
+                  </Link>
+                )}
+
+                {session.data ? (
+                  <Link href="/profile">
+                    <img
+                      src={String(session.data?.user?.image)}
+                      style={{ width: "40px", borderRadius: "50%" }}
+                      alt=""
+                    />
+                  </Link>
+                ) : (
+                  <Link href="/api/auth/signin">
+                    <img
+                      src="./images/logIn.png"
+                      style={{ width: "40px", borderRadius: "50%" }}
+                      alt=""
+                    />
+                  </Link>
+                )}
               </ul>
             </nav>
           </div>

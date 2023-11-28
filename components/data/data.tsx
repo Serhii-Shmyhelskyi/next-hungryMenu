@@ -165,3 +165,16 @@ export let dailyMenuarr = [
     href: "/images/dailyMenu15.jpg",
   },
 ];
+
+export let dataMenu2 = [
+  { href: "/menu", text: "MENU" },
+  { href: "/galerie", text: "GALERIE" },
+  { href: "/contact", text: "EVENTS" },
+];
+
+export let dataMenu1 = [
+  { href: "/", text: "HOME" },
+  { href: "/about", text: "ABOUT" },
+  { href: "/team", text: "TEAM" },
+  { href: "/booking", text: "BOOKING" },
+];

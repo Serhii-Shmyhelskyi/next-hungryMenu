@@ -6,6 +6,7 @@ import "./globals.scss";
 
 import { Header } from "../components/Header/index";
 import { Footer } from "../components/Footer/index";
+import { Providers } from "@/components/Providers";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

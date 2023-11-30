@@ -32,15 +32,6 @@ export default function Home() {
                     <button className="home__button">MENU</button>
                   </Link>
                 </div>
-                <div className="home__buttons-down">
-                  <div className="home__button-down">
-                    <img
-                      className="home__button-down--img"
-                      src="images/down-btn.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
               </div>
               <div className="home__box-right">
                 <div className="home__right-media">

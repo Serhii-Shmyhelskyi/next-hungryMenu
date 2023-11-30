@@ -16,7 +16,7 @@ export default async function SignIn() {
       <div>
         <h1 style={{ margin: "0", padding: "0 0 25px 0" }}>SignIn</h1>
         <GoogleButton />
-        <div>or</div>
+        <div style={{ padding: "15px" }}>for Admin</div>
         <SignInForm />
       </div>
     </div>

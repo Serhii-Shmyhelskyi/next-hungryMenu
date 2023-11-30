@@ -13,7 +13,7 @@ const About: FC = () => {
       <div className={styles.about__container}>
         <div className={styles.about__inner}>
           <div className={styles.about__box}>
-            <h3 className={styles.boxTitle}>ABOUT US</h3>
+            <h1 className={styles.boxTitle}>ABOUT US</h1>
             <h4 className={styles.boxTitle2}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
               velit maximus, molestie est a, tempor magna.

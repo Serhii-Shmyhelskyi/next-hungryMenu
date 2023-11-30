@@ -1,0 +1,18 @@
+.google__button {
+  width: 300px;
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 2px solid #e8c300;
+  background-color: inherit;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #e8c300;
+      cursor: pointer;
+      color: #000;
+    }
+  }
+}

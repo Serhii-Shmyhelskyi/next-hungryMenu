@@ -6,41 +6,36 @@ import Link from "next/link";
 
 const Booking: FC = () => {
   const [visible, setVisible] = useState(true);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [people, setPeople] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [allDateSt, setAllDateSt] = useState<any>({});
 
   let addVisible = () => {
     setVisible(true);
   };
 
-  let addNewGests = async (e: any) => {
+  let handleSubmit = async (e: any) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
     const allData = {
       // якщо локально
       // id: Date.now(),
-      name,
-      email,
-      phone,
-      people,
-      date,
-      time,
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      people: formData.get("people"),
+      date: formData.get("date"),
+      time: formData.get("time"),
+      redirect: false,
     };
+
+    setAllDateSt(allData);
+
     // оновлення сайту чере 0,5 с, після добавлянная поста
     // setTimeout(function () {
     //   location.reload();
     // }, 500);
     // очистка  useState
     setVisible(false);
-    // setName("");
-    // setEmail("");
-    // setPhone("");
-    // setPeople("");
-    // setDate("");
-    // setTime("");
     try {
       await fetch(`https://655c87bc25b76d9884fd79b6.mockapi.io/data`, {
         method: "POST",
@@ -66,73 +61,59 @@ const Booking: FC = () => {
           }}>
           <div className={styles.book__inner}>
             <div className={styles.book__box}>
-              <h3 className={styles.book__boxTitle}>BOOK A TABLE</h3>
+              <h1 className={styles.book__boxTitle}>BOOK A TABLE</h1>
               <div className={styles.book__boxBottom}></div>
               <div className={styles.book__inputs}>
                 <div className={styles.book__inputInner}>
-                  <div className={styles.input__inner}>
+                  <form onSubmit={handleSubmit}>
                     <input
                       className={styles.book__input}
                       type="text"
+                      name="name"
                       placeholder="Name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      required
                     />
-                  </div>
-                  <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
                       type="text"
                       placeholder="Email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      name="email"
                     />
-                  </div>
-                  <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
-                      type="tel"
+                      type="number"
                       placeholder="Phone +380-00-0000-000"
                       required
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      name="phone"
                     />
-                  </div>
-                  <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
                       type="number"
                       placeholder="Number of People"
-                      value={people}
-                      onChange={(e) => setPeople(e.target.value)}
-                    />
-                  </div>
-                  <div className={styles.book__select}>
-                    <input
-                      className={styles.book__input}
-                      type="text"
-                      placeholder="Date (mm/dd)"
                       required
-                      value={date}
-                      onChange={(e) => setDate(e.target.value)}
+                      name="people"
                     />
-                  </div>
-                  <div className={styles.book__select}>
                     <input
                       className={styles.book__input}
-                      type="text"
-                      placeholder="Time (hh:mm)"
-                      id="appt"
-                      name="appt"
-                      value={time}
-                      onChange={(e) => setTime(e.target.value)}
+                      type="number"
+                      placeholder="Date (mm.dd)"
+                      required
+                      name="date"
                     />
-                  </div>
+                    <input
+                      className={styles.book__input}
+                      type="number"
+                      placeholder="Time (hh.mm)"
+                      required
+                      name="time"
+                    />
+                    <button className={styles.book__button} type="submit">
+                      BOOK NOW
+                    </button>
+                  </form>
                 </div>
               </div>
-              <button className={styles.book__button} onClick={addNewGests}>
-                BOOK NOW
-              </button>
             </div>
             <div className={styles.book__images}>
               <img
@@ -150,7 +131,10 @@ const Booking: FC = () => {
             backgroundImage: "url(/images/private-bg.jpg)",
             backgroundSize: "cover",
           }}>
-          <h2>Thank's {name} for your reservation </h2>
+          <h2>
+            Thank's {allDateSt.name} for your reservation for {allDateSt.people}{" "}
+            people
+          </h2>
           <div>
             <img src="/images/gallery-6.jpg" alt="thank" />
           </div>

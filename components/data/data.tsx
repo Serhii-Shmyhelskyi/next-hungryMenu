@@ -178,3 +178,10 @@ export let dataMenu1 = [
   { href: "/team", text: "TEAM" },
   { href: "/booking", text: "BOOKING" },
 ];
+
+export let users = [
+  { email: "gg@gmail.com", password: "123", name: "Grisha" },
+  { email: "bit@gmail.com", password: "123", name: "Grisha" },
+  { email: "sol@gmail.com", password: "123", name: "Grisha" },
+  { email: "admin@gmail.com", password: "admin", name: "Admin" },
+];

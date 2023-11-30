@@ -13,7 +13,12 @@ const Profile = () => {
           backgroundSize: "cover",
         }}>
         <h1>Profile</h1>
-        <img src={String(session.data?.user?.image)} alt="User" />
+        {session.data?.user?.image ? (
+          <img src={String(session.data?.user?.image)} alt="User" />
+        ) : (
+          <img src="./images/user.gif" alt="User" />
+        )}
+
         <h3>Email: {session.data?.user?.email}</h3>
         <h3>Name: {session.data?.user?.name}</h3>
       </div>

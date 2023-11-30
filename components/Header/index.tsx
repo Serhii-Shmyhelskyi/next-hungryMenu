@@ -120,7 +120,7 @@ const Header: FC = () => {
                     />
                   </Link>
                 ) : (
-                  <Link href="/api/auth/signin">
+                  <Link href="/signin">
                     <img
                       src="./images/logIn.png"
                       style={{ width: "40px", borderRadius: "50%" }}

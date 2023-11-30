@@ -104,7 +104,7 @@ const Header: FC = () => {
                     </li>
                   </Link>
                 ) : (
-                  <Link href="/signin">
+                  <Link onClick={() => AllActive(toggleMenu)} href="/signin">
                     <li>
                       <h3>SING IN</h3>
                     </li>

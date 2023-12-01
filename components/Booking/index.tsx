@@ -61,7 +61,7 @@ const Booking: FC = () => {
           }}>
           <div className={styles.book__inner}>
             <div className={styles.book__box}>
-              <h1 className={styles.book__boxTitle}>BOOK A TABLE</h1>
+              <h1 className={styles.book__boxTitle}>BOOKING</h1>
               <div className={styles.book__boxBottom}></div>
               <div className={styles.book__inputs}>
                 <div className={styles.book__inputInner}>
@@ -96,15 +96,15 @@ const Booking: FC = () => {
                     />
                     <input
                       className={styles.book__input}
-                      type="number"
-                      placeholder="Date (mm.dd)"
+                      type="text"
+                      placeholder="Date (mm/dd)"
                       required
                       name="date"
                     />
                     <input
                       className={styles.book__input}
-                      type="number"
-                      placeholder="Time (hh.mm)"
+                      type="text"
+                      placeholder="Time (hh:mm)"
                       required
                       name="time"
                     />

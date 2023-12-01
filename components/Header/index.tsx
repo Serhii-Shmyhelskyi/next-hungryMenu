@@ -48,6 +48,11 @@ const Header: FC = () => {
                             obj.href
                           ),
                         })}>
+                        <img
+                          className={styles.headerMenuImgIcon}
+                          src={obj.urlIcon}
+                          alt="headerMenuIcon"
+                        />
                         <h3
                           className={classnames({
                             [styles.headerMenu__listActive]: isActiveMenu(
@@ -78,6 +83,11 @@ const Header: FC = () => {
                             obj.href
                           ),
                         })}>
+                        <img
+                          className={styles.headerMenuImgIcon}
+                          src={obj.urlIcon}
+                          alt="headerMenuIcon"
+                        />
                         <h3
                           className={classnames({
                             [styles.headerMenu__listActive]: isActiveMenu(
@@ -93,6 +103,11 @@ const Header: FC = () => {
                 {session?.data && (
                   <Link href="/profile">
                     <li>
+                      <img
+                        className={styles.headerMenuImgIcon}
+                        src="./images/profileIcon.png"
+                        alt="headerMenuIcon"
+                      />
                       <h3>PROFILE</h3>
                     </li>
                   </Link>
@@ -100,12 +115,22 @@ const Header: FC = () => {
                 {session?.data ? (
                   <Link href="#" onClick={() => signOut({ callbackUrl: "/" })}>
                     <li>
+                      <img
+                        className={styles.headerMenuImgIcon}
+                        src="./images/outIcon.png"
+                        alt="headerMenuIcon"
+                      />
                       <h3>SING OUT</h3>
                     </li>
                   </Link>
                 ) : (
                   <Link onClick={() => AllActive(toggleMenu)} href="/signin">
                     <li>
+                      <img
+                        className={styles.headerMenuImgIcon}
+                        src="./images/inIcon.png"
+                        alt="headerMenuIcon"
+                      />
                       <h3>SING IN</h3>
                     </li>
                   </Link>
@@ -114,17 +139,17 @@ const Header: FC = () => {
                 {session.data ? (
                   <Link href="/profile">
                     <img
+                      className={styles.menuAuthImg}
                       src={String(session.data?.user?.image)}
-                      style={{ width: "40px", borderRadius: "50%" }}
-                      alt=""
+                      alt="menuAuthImg"
                     />
                   </Link>
                 ) : (
                   <Link href="/signin">
                     <img
+                      className={styles.menuAuthImg}
                       src="./images/logIn.png"
-                      style={{ width: "40px", borderRadius: "50%" }}
-                      alt=""
+                      alt="menuAuthImg"
                     />
                   </Link>
                 )}

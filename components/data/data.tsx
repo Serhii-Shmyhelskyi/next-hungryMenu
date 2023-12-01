@@ -166,17 +166,17 @@ export let dailyMenuarr = [
   },
 ];
 
-export let dataMenu2 = [
-  { href: "/menu", text: "MENU" },
-  { href: "/galerie", text: "GALERIE" },
-  { href: "/contact", text: "EVENTS" },
+export let dataMenu1 = [
+  { href: "/", text: "HOME", urlIcon: "./images/homeIcon.png" },
+  { href: "/about", text: "ABOUT", urlIcon: "./images/aboutIcon.png" },
+  { href: "/team", text: "TEAM", urlIcon: "./images/teamIcon.png" },
+  { href: "/booking", text: "BOOKING", urlIcon: "./images/bookingIcon.png" },
 ];
 
-export let dataMenu1 = [
-  { href: "/", text: "HOME" },
-  { href: "/about", text: "ABOUT" },
-  { href: "/team", text: "TEAM" },
-  { href: "/booking", text: "BOOKING" },
+export let dataMenu2 = [
+  { href: "/menu", text: "MENU", urlIcon: "./images/menuIcon.png" },
+  { href: "/galerie", text: "GALERIE", urlIcon: "./images/galerieIcon.png" },
+  { href: "/contact", text: "CONTACT", urlIcon: "./images/contactIcon.png" },
 ];
 
 export let users = [
@@ -185,3 +185,6 @@ export let users = [
   { email: "sol@gmail.com", password: "123", name: "Grisha" },
   { email: "admin@gmail.com", password: "admin", name: "Admin" },
 ];
+
+export let urlMap =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1043.890586265932!2d-0.25010162506193934!3d51.51680762923338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487611d8fda85495%3A0x6f7137b2af9b07cb!2zMTQzIE9sZCBPYWsgQ29tbW9uIExuLCBMb25kb24gVzMgN0ROLCDQktC10LvQuNC60LAg0JHRgNC40YLQsNC90ZbRjw!5e0!3m2!1suk!2sua!4v1701428339082!5m2!1suk!2sua";

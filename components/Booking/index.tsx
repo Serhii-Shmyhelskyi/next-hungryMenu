@@ -82,14 +82,14 @@ const Booking: FC = () => {
                     />
                     <input
                       className={styles.book__input}
-                      type="number"
+                      type="text"
                       placeholder="Phone +380-00-0000-000"
                       required
                       name="phone"
                     />
                     <input
                       className={styles.book__input}
-                      type="number"
+                      type="text"
                       placeholder="Number of People"
                       required
                       name="people"

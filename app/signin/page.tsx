@@ -1,6 +1,6 @@
 "use client";
 import { GoogleButton } from "@/components/GoogleButton";
-// import { SignInForm } from "@/components/SignInForm";
+import { SignInForm } from "@/components/SignInForm";
 
 export default async function SignIn() {
   return (
@@ -17,7 +17,7 @@ export default async function SignIn() {
         <h1 style={{ margin: "0", padding: "0 0 25px 0" }}>SignIn</h1>
         <GoogleButton />
         <div style={{ padding: "15px" }}>for Admin</div>
-        {/* <SignInForm /> */}
+        <SignInForm />
       </div>
     </div>
   );

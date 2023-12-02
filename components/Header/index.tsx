@@ -117,8 +117,8 @@ const Header: FC = () => {
                     <li>
                       <img
                         className={styles.headerMenuImgIcon}
-                        src="./images/outIcon.png"
-                        alt="headerMenuIcon"
+                        src="./images/outicon.png"
+                        alt="headerMenuOutIcon"
                       />
                       <h3>SIGN OUT</h3>
                     </li>

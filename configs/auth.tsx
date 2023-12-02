@@ -9,6 +9,7 @@ export const authConfig: AuthOptions = {
       clientId: process.env.GO0GLE_CLIENT_ID!,
       clientSecret: process.env.GO0GLE_SECRET!,
     }),
+
     Credentials({
       credentials: {
         email: { label: "Email", type: "email", required: true },

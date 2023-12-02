@@ -175,14 +175,11 @@ export let dataMenu1 = [
 
 export let dataMenu2 = [
   { href: "/menu", text: "MENU", urlIcon: "./images/menuIcon.png" },
-  { href: "/galerie", text: "GALERIE", urlIcon: "./images/galerieIcon.png" },
+  { href: "/gallery", text: "GALLERY", urlIcon: "./images/galleryIcon.png" },
   { href: "/contact", text: "CONTACT", urlIcon: "./images/contactIcon.png" },
 ];
 
 export let users = [
-  { email: "gg@gmail.com", password: "123", name: "Grisha" },
-  { email: "bit@gmail.com", password: "123", name: "Grisha" },
-  { email: "sol@gmail.com", password: "123", name: "Grisha" },
   { email: "admin@gmail.com", password: "admin", name: "Admin" },
 ];
 

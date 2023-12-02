@@ -39,7 +39,7 @@ const SignInForm = () => {
         required
       />
       <button className={styles.singInForm__button} type="submit">
-        Sing In
+        Sign In
       </button>
     </form>
   );

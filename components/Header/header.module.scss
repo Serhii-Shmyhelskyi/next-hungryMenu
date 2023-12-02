@@ -81,6 +81,14 @@
   }
 }
 
+.headerMenu__list {
+  .menuAuthImg {
+    margin: 10px 0 0 0;
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+
 @media (max-width: 1290px) {
   .header__innerMenu {
     padding: 0;

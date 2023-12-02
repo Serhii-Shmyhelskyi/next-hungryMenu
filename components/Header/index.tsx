@@ -120,7 +120,7 @@ const Header: FC = () => {
                         src="./images/outIcon.png"
                         alt="headerMenuIcon"
                       />
-                      <h3>SING OUT</h3>
+                      <h3>SIGN OUT</h3>
                     </li>
                   </Link>
                 ) : (
@@ -131,7 +131,7 @@ const Header: FC = () => {
                         src="./images/inIcon.png"
                         alt="headerMenuIcon"
                       />
-                      <h3>SING IN</h3>
+                      <h3>SIGN IN</h3>
                     </li>
                   </Link>
                 )}
@@ -140,7 +140,11 @@ const Header: FC = () => {
                   <Link href="/profile">
                     <img
                       className={styles.menuAuthImg}
-                      src={String(session.data?.user?.image)}
+                      src={
+                        session.data?.user?.image
+                          ? String(session.data?.user?.image)
+                          : "./images/user.gif"
+                      }
                       alt="menuAuthImg"
                     />
                   </Link>

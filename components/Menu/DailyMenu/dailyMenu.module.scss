@@ -154,29 +154,31 @@
         border-radius: 10px;
         font-size: 16px;
         transition: all 0.15s ease-in-out;
-        &:active {
-          width: 240px;
-        }
         &:focus {
           width: 240px;
+          padding: 12px 40px;
         }
       }
       .searchInputDont {
-        width: 90px;
+        width: 40px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 12px 20px;
-        border-radius: 10px;
+        border-radius: 50%;
         font-size: 16px;
+        margin-right: 50px;
         transition: all 0.15s ease-in-out;
-        &:active {
-          width: 240px;
-        }
         &:focus {
           width: 240px;
+          padding: 12px 40px;
+          border-radius: 10px;
         }
       }
       .search_icon {
         left: 0;
+        top: 6px;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
       }
       .clearIcon {
         right: -140px;

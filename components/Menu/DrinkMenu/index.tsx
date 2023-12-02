@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 
 import styles from "./drinkMenu.module.scss";
 import { morningMenuarr } from "@/components/data/data";
@@ -7,9 +7,16 @@ import classnames from "classnames";
 
 const DrinkMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
+
   let sortMorningMenu = morningMenuarr.filter((post) =>
     post.text.toLowerCase().includes(search.toLowerCase())
   );
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const onInput = () => {
+    inputRef.current?.focus();
+  };
 
   return (
     <section className={styles.menu}>
@@ -18,6 +25,7 @@ const DrinkMenuComponent: FC = () => {
           <div className={styles.searchPosition}>
             <div className={styles.search}>
               <svg
+                onClick={() => onInput()}
                 className={styles.search_icon}
                 enableBackground="new 0 0 32 32"
                 id="EditableLine"
@@ -51,6 +59,7 @@ const DrinkMenuComponent: FC = () => {
                 />
               </svg>
               <input
+                ref={inputRef}
                 className={classnames({
                   [styles.searchInput]: search,
                   [styles.searchInputDont]: !search,

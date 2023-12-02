@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 
 import styles from "./dailyMenu.module.scss";
 import { dailyMenuarr } from "@/components/data/data";
@@ -7,9 +7,17 @@ import classnames from "classnames";
 
 const DailyMenuComponent: FC = () => {
   const [search, setSearch] = useState("");
+
   let sortDailyMenu = dailyMenuarr.filter((post) =>
     post.text.toLowerCase().includes(search.toLowerCase())
   );
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const onInput = () => {
+    inputRef.current?.focus();
+  };
+
   return (
     <section className={styles.menu}>
       <div className={styles.menu__container}>
@@ -17,6 +25,7 @@ const DailyMenuComponent: FC = () => {
           <div className={styles.searchPosition}>
             <div className={styles.search}>
               <svg
+                onClick={() => onInput()}
                 className={styles.search_icon}
                 enableBackground="new 0 0 32 32"
                 id="EditableLine"
@@ -49,7 +58,9 @@ const DailyMenuComponent: FC = () => {
                   y2="20.366"
                 />
               </svg>
+
               <input
+                ref={inputRef}
                 className={classnames({
                   [styles.searchInput]: search,
                   [styles.searchInputDont]: !search,

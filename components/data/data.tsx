@@ -181,6 +181,7 @@ export let dataMenu2 = [
 
 export let users = [
   { email: "admin@gmail.com", password: "admin", name: "Admin" },
+  { email: "admin2@gmail.com", password: "admin2", name: "Admin2" },
 ];
 
 export let urlMap =

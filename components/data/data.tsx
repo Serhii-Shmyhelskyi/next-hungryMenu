@@ -5,6 +5,7 @@ export let dailyMenuarr = [
       "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "25 USD",
     href: "/images/dailyMenu1.jpg",
+    id: "0",
   },
   {
     text: "Tango on the coast",
@@ -12,6 +13,7 @@ export let dailyMenuarr = [
       "Delight in the vibrant colors and flavors as you savor the tender, yet robust, sea asparagus, perfectly bathed in a tangy and aromatic tomato sauce. The marriage of flavors is a symphony in your mouth, combining the slight saltiness of the sea asparagus with the rich, savory notes of the tomato sauce.",
     price: "36 USD",
     href: "/images/dailyMenu2.jpg",
+    id: "1",
   },
   {
     text: "Smile in the setting sun",
@@ -19,42 +21,49 @@ export let dailyMenuarr = [
       "Each juicy shrimp is delicately seasoned and sautéed to perfection, ensuring a tender and flavorful bite in every mouthful. The combination of fragrant herbs, including basil, parsley, and cilantro, provides a vibrant and aromatic sensation that elevates the dish to new levels of culinary excellence.",
     price: "28 USD",
     href: "/images/dailyMenu3.jpg",
+    id: "2",
   },
   {
     text: "GRILLED FISH",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu4.jpg",
+    id: "3",
   },
   {
     text: "DRY SQUID",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu5.jpg",
+    id: "4",
   },
   {
     text: "SEA BASS",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu6.jpg",
+    id: "5",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu7.jpg",
+    id: "6",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu8.jpg",
+    id: "7",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
     about: " Integer ullamcorper neque eu purus euismod",
     price: "56 USD",
     href: "/images/dailyMenu9.jpg",
+    id: "8",
   },
 ];
 

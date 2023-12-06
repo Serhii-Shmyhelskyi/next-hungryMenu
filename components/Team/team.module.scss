@@ -18,6 +18,7 @@
     grid-auto-rows: auto;
     .teamLink {
       width: 250px;
+      height: 250px;
       margin: 30px auto 90px auto;
     }
     .team__wraperOne {
@@ -75,8 +76,6 @@
         margin: 10px auto 20px auto;
       }
       .team__wraperOne {
-        width: 200px;
-        height: 200px;
         img {
           width: 100px;
         }

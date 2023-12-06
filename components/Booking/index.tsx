@@ -3,21 +3,28 @@ import React, { FC, useState } from "react";
 
 import styles from "./booking.module.scss";
 import Link from "next/link";
+import {
+  regDate,
+  regEmail,
+  regName,
+  regNumber,
+  regPhone,
+  regTime,
+} from "../data/data";
+import classnames from "classnames";
 
 const Booking: FC = () => {
   const [visible, setVisible] = useState(true);
+  const [inputValid, setInputValid] = useState("");
   const [allDateSt, setAllDateSt] = useState<any>({});
-
-  let addVisible = () => {
-    setVisible(true);
-  };
 
   let handleSubmit = async (e: any) => {
     e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
 
-    const allData = {
-      // якщо локально
+    const allData: any = {
+      // if local
       // id: Date.now(),
       name: formData.get("name"),
       email: formData.get("email"),
@@ -29,25 +36,40 @@ const Booking: FC = () => {
     };
 
     setAllDateSt(allData);
+    // valid input
+    if (!regName.test(allData.name)) {
+      setInputValid("Name");
+    } else if (!regEmail.test(allData.email)) {
+      setInputValid("Email");
+    } else if (!regPhone.test(allData.phone)) {
+      setInputValid("Phone");
+    } else if (!regNumber.test(allData.people)) {
+      setInputValid("People");
+    } else if (!regDate.test(allData.date)) {
+      setInputValid("Date");
+    } else if (!regTime.test(allData.time)) {
+      setInputValid("Time");
+    } else {
+      setVisible(false);
+      try {
+        await fetch(`https://655c87bc25b76d9884fd79b6.mockapi.io/data`, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(allData),
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
     // оновлення сайту чере 0,5 с, після добавлянная поста
     // setTimeout(function () {
     //   location.reload();
     // }, 500);
     // очистка  useState
-    setVisible(false);
-    try {
-      await fetch(`https://655c87bc25b76d9884fd79b6.mockapi.io/data`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(allData),
-      });
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   return (
@@ -67,42 +89,60 @@ const Booking: FC = () => {
                 <div className={styles.book__inputInner}>
                   <form onSubmit={handleSubmit}>
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "Name",
+                      })}
                       type="text"
                       name="name"
                       placeholder="Name"
                       required
                     />
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "Email",
+                      })}
                       type="text"
                       placeholder="Email"
                       required
                       name="email"
                     />
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "Phone",
+                      })}
                       type="text"
                       placeholder="Phone +380-00-0000-000"
                       required
                       name="phone"
                     />
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "People",
+                      })}
                       type="text"
                       placeholder="Number of People"
                       required
                       name="people"
                     />
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "Date",
+                      })}
                       type="text"
                       placeholder="Date (mm/dd)"
                       required
                       name="date"
                     />
                     <input
-                      className={styles.book__input}
+                      className={classnames({
+                        [styles.book__input]: true,
+                        [styles.book__inputNoValide]: inputValid === "Time",
+                      })}
                       type="text"
                       placeholder="Time (hh:mm)"
                       required
@@ -111,6 +151,11 @@ const Booking: FC = () => {
                     <button className={styles.book__button} type="submit">
                       BOOK NOW
                     </button>
+                    {inputValid && (
+                      <p style={{ padding: "5px" }}>
+                        {inputValid}'s field is not filled in correctly
+                      </p>
+                    )}
                   </form>
                 </div>
               </div>
@@ -126,7 +171,7 @@ const Booking: FC = () => {
         </section>
       ) : (
         <div
-          className={styles.thamks}
+          className={styles.thanks}
           style={{
             backgroundImage: "url(/images/private-bg.jpg)",
             backgroundSize: "cover",
@@ -140,9 +185,7 @@ const Booking: FC = () => {
           </div>
 
           <Link href="/">
-            <button className={styles.book__button} onClick={addVisible}>
-              HOME
-            </button>
+            <button className={styles.book__button}>HOME</button>
           </Link>
         </div>
       )}

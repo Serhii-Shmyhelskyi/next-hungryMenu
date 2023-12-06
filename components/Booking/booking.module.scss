@@ -50,6 +50,9 @@
     text-indent: 20px;
   }
 }
+.book__inputNoValide {
+  border: 1px solid red;
+}
 
 .book__select {
   position: relative;
@@ -78,7 +81,7 @@
   margin: 100px 0;
 }
 
-.thamks {
+.thanks {
   text-align: center;
   height: 100vh;
   h2 {
@@ -90,10 +93,10 @@
     border-radius: 50px;
     margin-bottom: 20px;
   }
-  .thamksButton {
+  .book__button {
     width: 300px;
-    height: 30px;
-    background-color: #e8c300;
+    // height: 30px;
+    // background-color: #e8c300;
     cursor: pointer;
   }
 }
@@ -119,7 +122,7 @@
 }
 
 @media (max-width: 690px) {
-  .thamks {
+  .thanks {
     h2 {
       padding: 100px 0 20px 0;
     }

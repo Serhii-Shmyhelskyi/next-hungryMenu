@@ -8,6 +8,7 @@ type postType = {
   name: string;
   text: string;
   imageUrl: string;
+  proffesion: string;
 };
 
 export default async function Team() {
@@ -44,8 +45,12 @@ export default async function Team() {
               href={`team/${post.id}`}>
               <div className={styles.team__wraperOne}>
                 <h3>{post.name}</h3>
-                <img src={`${post.imageUrl}.png`} alt="photoTeam" />
-                <p>Proffesion</p>
+                <img
+                  style={{ width: "160px", borderRadius: "50%" }}
+                  src={`${post.imageUrl}.jpg`}
+                  alt="photoTeam"
+                />
+                <p>{post.proffesion}</p>
               </div>
             </Link>
           ))}

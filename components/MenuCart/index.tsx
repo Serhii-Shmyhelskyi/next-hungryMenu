@@ -20,22 +20,28 @@ const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
         <img src={href} alt="menu_img" />
         <h4>{price}</h4>
         {!isFavorite && (
-          <p className={styles.menu__preBoxText}>
-            {about.substring(0, 40) + "..."}
-          </p>
+          <div className={styles.menu__preBoxText}>
+            {about.substring(0, 30)}
+            <button
+              className={styles.menu__boxTextButton}
+              onClick={() => setIsFavorite(!isFavorite)}>
+              ...Reade more
+            </button>
+          </div>
         )}
 
-        <p
+        <div
           className={classnames({
             [styles.menu__boxText]: !isFavorite,
             [styles.menu__boxTextOpen]: isFavorite,
           })}>
-          {about.substring(0, about.length)}
-        </p>
-
-        <p className={styles.pMax} onClick={() => setIsFavorite(!isFavorite)}>
-          {isFavorite ? "Load min" : "Load more"}
-        </p>
+          {about.substring(0, about.length)}{" "}
+          <button
+            className={styles.menu__boxTextButton}
+            onClick={() => setIsFavorite(!isFavorite)}>
+            Reade less
+          </button>
+        </div>
       </div>
     </div>
   );

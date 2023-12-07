@@ -9,19 +9,21 @@
   margin-bottom: 20px;
   border: 2px solid #e8c300;
   border-radius: 40px;
+  transition: 0.2s;
   .menu__boxTitleContent {
     font-family: "Banny-light";
     font-size: 18px;
     line-height: 20px;
   }
   .menu__preBoxText {
-    transition: all 0.15s ease-in-out;
     font-family: "OpenSans-Regular";
     font-size: 16px;
     line-height: 18px;
+    text-align: justify;
+    padding: 10px;
   }
   .menu__boxText {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease;
     font-family: "OpenSans-Regular";
     font-size: 16px;
     line-height: 18px;
@@ -29,17 +31,19 @@
     overflow: hidden;
   }
   .menu__boxTextOpen {
-    transition: all 0.2s ease;
     font-family: "OpenSans-Regular";
     font-size: 16px;
+    text-align: justify;
     line-height: 18px;
+    padding: 10px;
   }
-  .pMax {
+  .menu__boxTextButton {
     cursor: pointer;
     color: #b7a02d;
     font-size: 14px;
-    margin-left: 235px;
-    width: 87px;
+    background-color: inherit;
+    border: none;
+    width: 80px;
     @media (hover: hover) {
       &:hover {
         color: #e8c300;
@@ -47,9 +51,6 @@
     }
   }
 
-  p {
-    padding: 5px;
-  }
   img {
     width: 250px;
     height: 250px;

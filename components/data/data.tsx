@@ -25,42 +25,48 @@ export let dailyMenuarr = [
   },
   {
     text: "GRILLED FISH",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu4.jpg",
     id: "3",
   },
   {
     text: "DRY SQUID",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu5.jpg",
     id: "4",
   },
   {
     text: "SEA BASS",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu6.jpg",
     id: "5",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu7.jpg",
     id: "6",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu8.jpg",
     id: "7",
   },
   {
     text: " PIZZA QUATRO STAGIONI",
-    about: " Integer ullamcorper neque eu purus euismod",
+    about:
+      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
     price: "56 USD",
     href: "/images/dailyMenu9.jpg",
     id: "8",

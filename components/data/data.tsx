@@ -1,8 +1,7 @@
 export let dailyMenuarr = [
   {
     text: "Dreams near the sea",
-    about:
-      "Enjoy a delectable and well-balanced culinary experience with our Pasta with sea asparagus und Tomato. Our 'Dreams near the sea' features fresh, handmade pasta tossed in a rich and flavorful sauce made from the finest quality ingredients. The pasta is cooked al dente, ensuring a perfect balance of texture and taste.",
+    about: "dente, ensuring a perfect balance of texture and taste.",
     price: "25 USD",
     href: "/images/dailyMenu1.jpg",
     id: "0",

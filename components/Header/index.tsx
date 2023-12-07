@@ -29,7 +29,7 @@ const Header: FC = () => {
     <>
       <header
         className={classnames({
-          [styles.headerMenu__toggleRight]: !toggleMenu,
+          [styles.headerMenu__header]: !toggleMenu,
         })}>
         <div className={styles.header__innerMenu}>
           <div className={styles.headerMenu__content}>

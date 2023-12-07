@@ -100,17 +100,3 @@
     width: 300px;
   }
 }
-
-.menu__boxText-enter {
-  opacity: 0;
-}
-.menu__boxText-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-.menu__boxText-exit {
-  opacity: 1;
-}
-.menu__boxText-exit-active {
-  transition: all 2s ease-in-out;
-}

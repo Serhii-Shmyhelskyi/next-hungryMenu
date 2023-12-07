@@ -1,6 +1,8 @@
 "use content";
 import React, { FC, useState } from "react";
 
+import { CSSTransition } from "react-transition-group";
+
 import styles from "./menuCart.module.scss";
 
 type CategoriesProps = {
@@ -18,8 +20,21 @@ const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
         <h4 className={styles.menu__boxTitleContent}>{text}</h4>
         <img src={href} alt="menu_img" />
         <h4>{price}</h4>
+        <p className={styles.menu__boxText}>
+          {about.substring(0, 40)} {!isFavorite && "..."}
+        </p>
 
-        {isFavorite ? (
+        <CSSTransition
+          in={isFavorite}
+          timeout={300}
+          classNames="my-node"
+          unmountOnExit>
+          <p className={styles.menu__boxText}>
+            {about.substring(40, about.length)}
+          </p>
+        </CSSTransition>
+
+        {/* {isFavorite ? (
           <p className={styles.menu__boxText}>
             {about.substring(0, about.length)}
           </p>
@@ -27,7 +42,7 @@ const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
           <p className={styles.menu__boxText}>
             {about.substring(0, 40) + "..."}
           </p>
-        )}
+        )} */}
         <p className={styles.pMax} onClick={() => setIsFavorite(!isFavorite)}>
           {isFavorite ? "Load min" : "Load more"}
         </p>

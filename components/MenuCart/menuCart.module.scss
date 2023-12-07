@@ -14,19 +14,37 @@
     font-size: 18px;
     line-height: 20px;
   }
-  .menu__boxText {
+  .menu__preBoxText {
+    transition: all 0.15s ease-in-out;
     font-family: "OpenSans-Regular";
     font-size: 16px;
     line-height: 18px;
   }
+  .menu__boxText {
+    transition: all 0.15s ease-in-out;
+    font-family: "OpenSans-Regular";
+    font-size: 16px;
+    line-height: 18px;
+    height: 0;
+    overflow: hidden;
+  }
+  .menu__boxTextOpen {
+    transition: all 0.15s ease-in-out;
+    font-family: "OpenSans-Regular";
+    font-size: 16px;
+    line-height: 18px;
+    height: auto;
+  }
   .pMax {
     cursor: pointer;
     color: #b7a02d;
+    font-size: 14px;
+    text-align: end;
+    &:hover {
+      color: #e8c300;
+    }
   }
-  .pMin {
-    cursor: pointer;
-    color: #ffdf;
-  }
+
   p {
     padding: 5px;
   }

@@ -38,7 +38,8 @@
     cursor: pointer;
     color: #b7a02d;
     font-size: 14px;
-    text-align: end;
+    margin-left: 235px;
+    width: 87px;
     @media (hover: hover) {
       &:hover {
         color: #e8c300;
@@ -117,5 +118,8 @@
   }
   .menu__contentBox {
     width: 300px;
+    .pMax {
+      margin-left: 175px;
+    }
   }
 }

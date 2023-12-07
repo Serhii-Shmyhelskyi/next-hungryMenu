@@ -95,10 +95,6 @@
     }
   }
 
-  .headerMenu__toggleRight {
-    display: block;
-  }
-
   .headerMenu_btn {
     display: flex;
     align-items: center;
@@ -158,7 +154,7 @@
     }
   }
 
-  .headerMenu__toggleRight {
+  .headerMenu__header {
     .headerMenu__content {
       transform: translateX(0);
       background-color: #eed56e;

@@ -21,7 +21,7 @@
     line-height: 18px;
   }
   .menu__boxText {
-    transition: all 0.15s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-family: "OpenSans-Regular";
     font-size: 16px;
     line-height: 18px;
@@ -29,19 +29,21 @@
     overflow: hidden;
   }
   .menu__boxTextOpen {
-    transition: all 0.15s ease-in-out;
+    transition: all 0.2s ease;
     font-family: "OpenSans-Regular";
     font-size: 16px;
     line-height: 18px;
-    height: auto;
+    height: 128px;
   }
   .pMax {
     cursor: pointer;
     color: #b7a02d;
     font-size: 14px;
     text-align: end;
-    &:hover {
-      color: #e8c300;
+    @media (hover: hover) {
+      &:hover {
+        color: #e8c300;
+      }
     }
   }
 

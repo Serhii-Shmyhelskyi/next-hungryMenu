@@ -49,6 +49,10 @@
           color: #fff;
         }
       }
+      &:active {
+        height: 35px;
+        background-color: rgb(69, 195, 69);
+      }
     }
   }
 }

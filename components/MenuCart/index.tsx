@@ -28,7 +28,7 @@ const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
           })}>
           {isFavorite
             ? about.substring(0, about.length)
-            : about.substring(0, 55)}
+            : about.substring(0, 60)}
           <button
             className={styles.menu__boxTextButton}
             onClick={() => setIsFavorite(!isFavorite)}>

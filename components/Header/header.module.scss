@@ -26,6 +26,7 @@
     &.headerMenu__listActive {
       color: #ffffff;
       background-color: #545252;
+      border: 1px solid #a88d07;
       border-radius: 50px;
     }
     h3 {
@@ -139,12 +140,8 @@
           top: 10px;
         }
       }
-      .active {
-        background-color: #545252;
-        border: 2px solid #a88d07;
-      }
       @media (hover: hover) {
-        .active:hover {
+        .activeBtnMenu:hover {
           background-color: #3a3939;
           color: #a88d07;
         }
@@ -158,11 +155,9 @@
     }
   }
 
-  .headerMenu__header {
-    .headerMenu__content {
-      transform: translateX(0);
-      background-color: #eed56e;
-    }
+  .headerMenu__contentOpen {
+    transform: translateX(0);
+    background-color: #eed56e;
   }
 
   .headerMenu__wrapper {

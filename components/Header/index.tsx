@@ -27,12 +27,13 @@ const Header: FC = () => {
 
   return (
     <>
-      <header
-        className={classnames({
-          [styles.headerMenu__header]: !toggleMenu,
-        })}>
+      <header>
         <div className={styles.header__innerMenu}>
-          <div className={styles.headerMenu__content}>
+          <div
+            className={classnames({
+              [styles.headerMenu__content]: true,
+              [styles.headerMenu__contentOpen]: !toggleMenu,
+            })}>
             <nav className={styles.headerMenu__listWraper}>
               <ul className={styles.headerMenu__list}>
                 {dataMenu1.map((obj, i) => {
@@ -43,7 +44,6 @@ const Header: FC = () => {
                       onClick={() => AllActive(toggleMenu)}>
                       <li
                         className={classnames({
-                          [styles.active]: isActiveMenu(obj.href),
                           [styles.headerMenu__listActive]: isActiveMenu(
                             obj.href
                           ),
@@ -73,7 +73,6 @@ const Header: FC = () => {
                       onClick={() => AllActive(toggleMenu)}>
                       <li
                         className={classnames({
-                          [styles.active]: isActiveMenu(obj.href),
                           [styles.headerMenu__listActive]: isActiveMenu(
                             obj.href
                           ),

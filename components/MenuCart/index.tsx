@@ -23,7 +23,7 @@ const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
 
         <div
           className={classnames({
-            [styles.menu__boxText]: !isFavorite,
+            [styles.menu__boxText]: true,
             [styles.menu__boxTextOpen]: isFavorite,
           })}>
           {isFavorite

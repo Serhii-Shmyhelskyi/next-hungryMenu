@@ -13,33 +13,26 @@ type CategoriesProps = {
 
 const MenuCart: FC<CategoriesProps> = ({ href, text, price, about }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  let allText = about.substring(0, about.length);
+  let nAlltext = about.substring(0, 55);
   return (
     <div className={styles.menu__content}>
       <div className={styles.menu__contentBox}>
         <h4 className={styles.menu__boxTitleContent}>{text}</h4>
         <img src={href} alt="menu_img" />
         <h4>{price}</h4>
-        {!isFavorite && (
-          <div className={styles.menu__preBoxText}>
-            {about.substring(0, 55)}
-            <button
-              className={styles.menu__boxTextButton}
-              onClick={() => setIsFavorite(!isFavorite)}>
-              ...Reade more
-            </button>
-          </div>
-        )}
-
         <div
           className={classnames({
             [styles.menu__boxText]: !isFavorite,
             [styles.menu__boxTextOpen]: isFavorite,
           })}>
-          {about.substring(0, about.length)}
+          {isFavorite
+            ? about.substring(0, about.length)
+            : about.substring(0, 55)}
           <button
             className={styles.menu__boxTextButton}
             onClick={() => setIsFavorite(!isFavorite)}>
-            Reade less
+            {isFavorite ? "Reade less" : "...Reade more"}
           </button>
         </div>
       </div>

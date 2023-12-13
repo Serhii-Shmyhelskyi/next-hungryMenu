@@ -153,7 +153,8 @@ button {
     background-color: rgb(69, 195, 69);
   }
   .home__buttonLink {
-    padding: 22px 58px;
+    display: inline-block;
+    width: 100%;
   }
 }
 

@@ -68,12 +68,17 @@
   text-align: center;
   line-height: 60px;
   color: #fff;
+  transition: all 0.3s ease-in;
   @media (hover: hover) {
     &:hover {
       background-color: #e8c300;
       cursor: pointer;
       color: #000;
     }
+  }
+  &:active {
+    background-color: rgb(69, 195, 69);
+    border: 2px solid #0f9327;
   }
 }
 

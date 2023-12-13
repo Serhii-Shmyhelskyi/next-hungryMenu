@@ -5,4 +5,27 @@
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: 700;
+  transition: all 0.3s ease-in;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #d4bc42;
+    }
+  }
+  &:active {
+    background-color: rgb(69, 195, 69);
+  }
+  cursor: pointer;
+  a {
+    transition: all 0.3s ease-in;
+    display: inline-block;
+    @media (hover: hover) {
+      &:hover {
+        color: rgb(131, 126, 126);
+        transform: scale(1.1, 1);
+      }
+    }
+    &:active {
+      color: rgb(69, 195, 69);
+    }
+  }
 }

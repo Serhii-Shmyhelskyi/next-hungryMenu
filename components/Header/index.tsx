@@ -38,26 +38,23 @@ const Header: FC = () => {
               <ul className={styles.headerMenu__list}>
                 {dataMenu1.map((obj, i) => {
                   return (
-                    <Link
-                      href={obj.href}
+                    <li
                       key={i}
-                      onClick={() => AllActive(toggleMenu)}>
-                      <li
+                      className={classnames({
+                        [styles.headerMenu__listActive]: isActiveMenu(obj.href),
+                      })}>
+                      <Link
                         className={classnames({
+                          [styles.headerMenu__listLink]: true,
                           [styles.headerMenu__listActive]: isActiveMenu(
                             obj.href
                           ),
-                        })}>
-                        <h3
-                          className={classnames({
-                            [styles.headerMenu__listActive]: isActiveMenu(
-                              obj.href
-                            ),
-                          })}>
-                          {obj.text}
-                        </h3>
-                      </li>
-                    </Link>
+                        })}
+                        href={obj.href}
+                        onClick={() => AllActive(toggleMenu)}>
+                        {obj.text}
+                      </Link>
+                    </li>
                   );
                 })}
               </ul>
@@ -67,47 +64,52 @@ const Header: FC = () => {
               <ul className={styles.headerMenu__list}>
                 {dataMenu2.map((obj, i) => {
                   return (
-                    <Link
-                      href={obj.href}
+                    <li
                       key={i}
-                      onClick={() => AllActive(toggleMenu)}>
-                      <li
+                      className={classnames({
+                        [styles.headerMenu__listActive]: isActiveMenu(obj.href),
+                      })}>
+                      <Link
                         className={classnames({
+                          [styles.headerMenu__listLink]: true,
                           [styles.headerMenu__listActive]: isActiveMenu(
                             obj.href
                           ),
-                        })}>
-                        <h3
-                          className={classnames({
-                            [styles.headerMenu__listActive]: isActiveMenu(
-                              obj.href
-                            ),
-                          })}>
-                          {obj.text}
-                        </h3>
-                      </li>
-                    </Link>
+                        })}
+                        href={obj.href}
+                        onClick={() => AllActive(toggleMenu)}>
+                        {obj.text}
+                      </Link>
+                    </li>
                   );
                 })}
                 {session?.data && (
-                  <Link href="/profile">
-                    <li>
-                      <h3>PROFILE</h3>
-                    </li>
-                  </Link>
+                  <li>
+                    <Link
+                      className={styles.headerMenu__listLink}
+                      href="/profile">
+                      PROFILE
+                    </Link>
+                  </li>
                 )}
                 {session?.data ? (
-                  <Link href="#" onClick={() => signOut({ callbackUrl: "/" })}>
-                    <li>
-                      <h3>SIGN OUT</h3>
-                    </li>
-                  </Link>
+                  <li>
+                    <Link
+                      className={styles.headerMenu__listLink}
+                      href="#"
+                      onClick={() => signOut({ callbackUrl: "/" })}>
+                      SIGN OUT
+                    </Link>
+                  </li>
                 ) : (
-                  <Link onClick={() => AllActive(toggleMenu)} href="/signin">
-                    <li>
-                      <h3>SIGN IN</h3>
-                    </li>
-                  </Link>
+                  <li>
+                    <Link
+                      className={styles.headerMenu__listLink}
+                      onClick={() => AllActive(toggleMenu)}
+                      href="/signin">
+                      SIGN IN
+                    </Link>
+                  </li>
                 )}
 
                 {session.data ? (

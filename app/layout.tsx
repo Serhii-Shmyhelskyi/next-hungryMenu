@@ -6,7 +6,7 @@ import "./globals.scss";
 
 import { Header } from "../components/Header/index";
 import { Footer } from "../components/Footer/index";
-import { Providers } from "@/components/Providers";
+import { Providers } from "../components/Providers";
 
 const roboto = Roboto({
   weight: ["400", "700"],

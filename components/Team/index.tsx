@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import React from "react";
 import styles from "./team.module.scss";
@@ -11,23 +10,20 @@ type postType = {
   proffesion: string;
 };
 
-export default async function Team() {
-  async function getData() {
-    try {
-      const response = await fetch(
-        `https://655c87bc25b76d9884fd79b6.mockapi.io/Team/`,
-        {
-          next: {
-            revalidate: 60,
-          },
-        }
-      );
-      return response.json();
-    } catch (error) {
-      console.log(error);
-    }
+async function getData() {
+  try {
+    const response = await fetch(
+      `https://655c87bc25b76d9884fd79b6.mockapi.io/Team/`
+    );
+    return response.json();
+  } catch (error) {
+    console.log(error);
   }
+}
+
+export default async function Team() {
   const posts = await getData();
+
   return (
     <div
       className={styles.team}

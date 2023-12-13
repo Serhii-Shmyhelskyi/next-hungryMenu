@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 import styles from "./contact.module.scss";
 import { urlMap } from "../data/data";
 import { CircularProgress, Link } from "@mui/material";
-import { regEmail, regName, regNumber, regPhone } from "../data/data";
+import { regEmail, regName, regPhone } from "../data/data";
 import classnames from "classnames";
 
 const Contact: FC = () => {

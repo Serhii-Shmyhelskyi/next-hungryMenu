@@ -22,11 +22,11 @@
     max-height: 48px;
     text-align: justify;
     overflow: hidden;
-    transition: all 0.25s ease-in;
+    transition: all 0.3s ease-out;
   }
 
   .menu__boxTextOpen {
-    transition: all 0.25s ease-in;
+    transition: all 0.3s ease-in;
     max-height: 250px;
   }
 

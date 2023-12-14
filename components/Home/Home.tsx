@@ -42,21 +42,21 @@ export default function Home() {
                       <img
                         className="home__media-img"
                         src="images/facebook.svg"
-                        alt=""
+                        alt="facebook"
                       />
                     </a>
                     <a className="home__media-twitter" href="#">
                       <img
                         className="home__media-img"
                         src="images/twitter.svg"
-                        alt=""
+                        alt="twitter"
                       />
                     </a>
                     <a className="home__media-instagram" href="#">
                       <img
                         className="home__media-img"
                         src="images/instagram.svg"
-                        alt=""
+                        alt="instagram"
                       />
                     </a>
                   </div>

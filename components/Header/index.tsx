@@ -84,9 +84,16 @@ const Header: FC = () => {
                   );
                 })}
                 {session?.data && (
-                  <li>
+                  <li
+                    className={classnames({
+                      [styles.headerMenu__listActive]: isActiveMenu("/profile"),
+                    })}>
                     <Link
-                      className={styles.headerMenu__listLink}
+                      className={classnames({
+                        [styles.headerMenu__listLink]: true,
+                        [styles.headerMenu__listActive]:
+                          isActiveMenu("/profile"),
+                      })}
                       href="/profile">
                       PROFILE
                     </Link>
@@ -95,16 +102,25 @@ const Header: FC = () => {
                 {session?.data ? (
                   <li>
                     <Link
-                      className={styles.headerMenu__listLink}
+                      className={classnames({
+                        [styles.headerMenu__listLink]: true,
+                      })}
                       href="#"
                       onClick={() => signOut({ callbackUrl: "/" })}>
                       SIGN OUT
                     </Link>
                   </li>
                 ) : (
-                  <li>
+                  <li
+                    className={classnames({
+                      [styles.headerMenu__listActive]: isActiveMenu("/signin"),
+                    })}>
                     <Link
-                      className={styles.headerMenu__listLink}
+                      className={classnames({
+                        [styles.headerMenu__listLink]: true,
+                        [styles.headerMenu__listActive]:
+                          isActiveMenu("/signin"),
+                      })}
                       onClick={() => AllActive(toggleMenu)}
                       href="/signin">
                       SIGN IN

@@ -1,60 +1,72 @@
 import Link from "next/link";
-import "../../scss/style.scss";
+import styles from "./home.module.scss";
 
 export default function Home() {
   return (
     <>
-      <div className="home">
+      <div className={styles.home}>
         <div
-          className="home__top"
+          className={styles.home__top}
           style={{ backgroundImage: "url(/images/headerBg.jpg)" }}>
-          <div className="home__inner container">
-            <div className="home__logo">
-              <img className="home__logo-img" src="images/home-logo.png" />
+          <div className={styles.home__container}>
+            <div className={styles.home__logo}>
+              <img
+                className={styles.home__logoImg}
+                src="images/home-logo.png"
+              />
             </div>
-            <div className="home__inner-center">
-              <div className="home__box-left">
-                <p className="home__left-text">
+            <div className={styles.home__innerCenter}>
+              <div className={styles.home__boxLeft}>
+                <p className={styles.home__leftText}>
                   Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
                 </p>
               </div>
-              <div className="home__box-center">
-                <p className="home__suptitle">RESTAURANT</p>
-                <h1 className="home__title">HUNGRY PEOPLE</h1>
-                <div className="heder__title-bottom line-bottom"></div>
-                <div className="home__buttons">
-                  <button className="home__button home__buttonActive">
-                    <Link className="home__buttonLink" href="/booking">
+              <div className={styles.home__boxCenter}>
+                <p className={styles.home__suptitle}>RESTAURANT</p>
+                <h1 className={styles.home__title}>HUNGRY PEOPLE</h1>
+                <div className={styles.heder__titleBottom}></div>
+                <div className={styles.home__buttons}>
+                  <button className={styles.home__button}>
+                    <Link className={styles.home__buttonLink} href="/booking">
                       BOOK TABLE
                     </Link>
                   </button>
-                  <button className="home__button">
-                    <Link className="home__buttonLink" href="/menu">
+                  <button className={styles.home__button}>
+                    <Link className={styles.home__buttonLink} href="/menu">
                       MENU
                     </Link>
                   </button>
                 </div>
               </div>
-              <div className="home__box-right">
-                <div className="home__right-media">
-                  <div className="home__media">
-                    <a className="home__media-facebook" href="#">
+              <div className={styles.home__boxRight}>
+                <div className={styles.home__rightMedia}>
+                  <div className={styles.home__media}>
+                    <a
+                      className={styles.home__mediaFacebook}
+                      href="https://www.facebook.com/?locale=uk_UA"
+                      target="_blank">
                       <img
-                        className="home__media-img"
+                        className={styles.home__mediaImg}
                         src="images/facebook.svg"
                         alt="facebook"
                       />
                     </a>
-                    <a className="home__media-twitter" href="#">
+                    <a
+                      className={styles.home__mediaTwitter}
+                      href="https://twitter.com/i/flow/login"
+                      target="_blank">
                       <img
-                        className="home__media-img"
+                        className={styles.home__mediaImg}
                         src="images/twitter.svg"
                         alt="twitter"
                       />
                     </a>
-                    <a className="home__media-instagram" href="#">
+                    <a
+                      className={styles.home__mediaInstagram}
+                      href="https://www.instagram.com/"
+                      target="_blank">
                       <img
-                        className="home__media-img"
+                        className={styles.home__mediaImg}
                         src="images/instagram.svg"
                         alt="instagram"
                       />

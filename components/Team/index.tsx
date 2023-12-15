@@ -31,7 +31,7 @@ export default async function Team() {
         backgroundImage: "url(/images/our-bg.jpg)",
         backgroundSize: "cover",
       }}>
-      <div className={styles.team__container}>
+      <div className="container">
         <h1>OUR TEAM</h1>
         <div className={styles.team__wraper}>
           {posts.map((post: postType) => (

@@ -26,7 +26,7 @@ const MenuComponent: FC = () => {
         backgroundImage: "url(/images/private-bg.jpg)",
         backgroundSize: "cover",
       }}>
-      <div className={styles.menu__container}>
+      <div className="container">
         <div className={styles.menu__inner}>
           <h1 className={styles.menu__title}>MENU</h1>
           <div className={styles.searchPosition}>

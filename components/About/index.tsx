@@ -10,7 +10,7 @@ const About: FC = () => {
         backgroundImage: "url(/images/private-bg.jpg)",
         backgroundSize: "cover",
       }}>
-      <div className={styles.about__container}>
+      <div className="container">
         <div className={styles.about__inner}>
           <div className={styles.about__box}>
             <h1 className={styles.boxTitle}>ABOUT US</h1>

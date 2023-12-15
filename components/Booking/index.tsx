@@ -81,91 +81,93 @@ const Booking: FC = () => {
             backgroundImage: "url(/images/private-bg.jpg)",
             backgroundSize: "cover",
           }}>
-          <div className={styles.book__inner}>
-            <div className={styles.book__box}>
-              <h1 className={styles.book__boxTitle}>BOOKING</h1>
-              <div className={styles.book__boxBottom}></div>
-              <div className={styles.book__inputs}>
-                <div className={styles.book__inputInner}>
-                  <form onSubmit={handleSubmit}>
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "Name",
-                      })}
-                      type="text"
-                      name="name"
-                      placeholder="Name"
-                      required
-                    />
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "Email",
-                      })}
-                      type="text"
-                      placeholder="Email"
-                      required
-                      name="email"
-                    />
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "Phone",
-                      })}
-                      type="text"
-                      placeholder="Phone +380-00-0000-000"
-                      required
-                      name="phone"
-                    />
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "People",
-                      })}
-                      type="text"
-                      placeholder="Number of People"
-                      required
-                      name="people"
-                    />
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "Date",
-                      })}
-                      type="text"
-                      placeholder="Date (mm/dd)"
-                      required
-                      name="date"
-                    />
-                    <input
-                      className={classnames({
-                        [styles.book__input]: true,
-                        [styles.book__inputNoValide]: inputValid === "Time",
-                      })}
-                      type="text"
-                      placeholder="Time (hh:mm)"
-                      required
-                      name="time"
-                    />
-                    <button className={styles.book__button} type="submit">
-                      BOOK NOW
-                    </button>
-                    {inputValid && (
-                      <p style={{ padding: "5px" }}>
-                        {inputValid}'s field is not filled in correctly
-                      </p>
-                    )}
-                  </form>
+          <div className="container">
+            <div className={styles.book__inner}>
+              <div className={styles.book__box}>
+                <h1 className={styles.book__boxTitle}>BOOKING</h1>
+                <div className={styles.book__boxBottom}></div>
+                <div className={styles.book__inputs}>
+                  <div className={styles.book__inputInner}>
+                    <form onSubmit={handleSubmit}>
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "Name",
+                        })}
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        required
+                      />
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "Email",
+                        })}
+                        type="text"
+                        placeholder="Email"
+                        required
+                        name="email"
+                      />
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "Phone",
+                        })}
+                        type="text"
+                        placeholder="Phone +380-00-0000-000"
+                        required
+                        name="phone"
+                      />
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "People",
+                        })}
+                        type="text"
+                        placeholder="Number of People"
+                        required
+                        name="people"
+                      />
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "Date",
+                        })}
+                        type="text"
+                        placeholder="Date (mm/dd)"
+                        required
+                        name="date"
+                      />
+                      <input
+                        className={classnames({
+                          [styles.book__input]: true,
+                          [styles.book__inputNoValide]: inputValid === "Time",
+                        })}
+                        type="text"
+                        placeholder="Time (hh:mm)"
+                        required
+                        name="time"
+                      />
+                      <button className={styles.book__button} type="submit">
+                        BOOK NOW
+                      </button>
+                      {inputValid && (
+                        <p style={{ padding: "5px" }}>
+                          {inputValid}'s field is not filled in correctly
+                        </p>
+                      )}
+                    </form>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.book__images}>
-              <img
-                className={styles.book__imagesImg}
-                src="images/book.png"
-                alt="bookImg"
-              />
+              <div className={styles.book__images}>
+                <img
+                  className={styles.book__imagesImg}
+                  src="images/book.png"
+                  alt="bookImg"
+                />
+              </div>
             </div>
           </div>
         </section>

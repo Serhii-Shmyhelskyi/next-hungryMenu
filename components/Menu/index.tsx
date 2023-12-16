@@ -2,16 +2,23 @@
 import React, { FC, useState } from "react";
 
 import styles from "./menu.module.scss";
-import { dailyMenuarr } from "@/components/data/data";
+
 import MenuCart from "../MenuCart";
 import MenuComponentSearch from "../MenuSearch";
 
-const MenuComponent: FC = () => {
-  const [search, setSearch] = useState("");
+type itemMenu = {
+  text: string;
+  about: string;
+  price: string;
+  href: string;
+};
 
-  let sortDailyMenu = dailyMenuarr.filter((post) =>
-    post.text.toLowerCase().includes(search.toLowerCase())
-  );
+const MenuComponent: FC = () => {
+  const [sortDailyMenu, setsortDailyMenu] = useState([]);
+
+  let dailyMenuFunction = (item: any) => {
+    setsortDailyMenu(item);
+  };
 
   return (
     <section
@@ -23,7 +30,8 @@ const MenuComponent: FC = () => {
       <div className="container">
         <div className={styles.menu__inner}>
           <h1 className={styles.menu__title}>MENU</h1>
-          <MenuComponentSearch search={search} setSearch={setSearch} />
+
+          <MenuComponentSearch dalymenuSearch={dailyMenuFunction} />
 
           <div className={styles.menu__box}>
             <h3 className={styles.boxTitle}>Taste and Enjoy</h3>
@@ -32,7 +40,7 @@ const MenuComponent: FC = () => {
             </h4>
           </div>
           <div>
-            {sortDailyMenu.map((obj, i) => (
+            {sortDailyMenu.map((obj: itemMenu, i: number) => (
               <MenuCart key={i} {...obj} />
             ))}
           </div>

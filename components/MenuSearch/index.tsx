@@ -1,16 +1,32 @@
 "use client";
-import React, { FC, useRef } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 
 import styles from "./menuSearch.module.scss";
 import classnames from "classnames";
+import { dailyMenuarr } from "../data/data";
 
-type CategoriesProps = {
-  search: string;
-  setSearch: (number: string) => void;
+type itemMenu = {
+  text: string;
+  about: string;
+  price: string;
+  href: string;
 };
 
-const MenuComponentSearch: FC<CategoriesProps> = ({ setSearch, search }) => {
+type CategoriesProps = {
+  dalymenuSearch: (item: itemMenu[]) => void;
+};
+
+const MenuComponentSearch: FC<CategoriesProps> = ({ dalymenuSearch }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [search, setSearch] = useState("");
+
+  let sortDailyMenu = dailyMenuarr.filter((post) =>
+    post.text.toLowerCase().includes(search.toLowerCase())
+  );
+
+  useEffect(() => {
+    dalymenuSearch(sortDailyMenu);
+  }, [search]);
 
   const onInput = () => {
     inputRef.current?.focus();

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import classnames from "classnames";
-import styles from "./headerButton.module.scss";
+import styles from "./HeaderButton.module.scss";
 import React, { useState, FC } from "react";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";

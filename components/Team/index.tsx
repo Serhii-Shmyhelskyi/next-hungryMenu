@@ -13,7 +13,7 @@ type postType = {
 async function getData() {
   try {
     const response = await fetch(
-      `https://655c87bc25b76d9884fd79b6.mockapi.io/Team/`
+      `https://next-hungry-menu.vercel.app/api/teams`
     );
     return response.json();
   } catch (error) {

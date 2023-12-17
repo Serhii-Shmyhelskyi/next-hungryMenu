@@ -16,8 +16,9 @@ type CategoriesProps = {
   dalymenuSearch: (item: itemMenu[]) => void;
 };
 
-const MenuComponentSearch: FC<CategoriesProps> = ({ dalymenuSearch }) => {
+const MenuSearch: FC<CategoriesProps> = ({ dalymenuSearch }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+
   const [search, setSearch] = useState("");
 
   let sortDailyMenu = dailyMenuarr.filter((post) =>
@@ -95,4 +96,4 @@ const MenuComponentSearch: FC<CategoriesProps> = ({ dalymenuSearch }) => {
   );
 };
 
-export default MenuComponentSearch;
+export default MenuSearch;

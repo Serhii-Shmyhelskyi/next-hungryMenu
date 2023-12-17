@@ -12,7 +12,9 @@ type postType = {
 
 async function getData() {
   try {
-    const response = await fetch(`/api/teams`);
+    const response = await fetch(
+      `https://655c87bc25b76d9884fd79b6.mockapi.io/Team`
+    );
     return response.json();
   } catch (error) {
     console.log(error);

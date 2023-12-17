@@ -12,9 +12,7 @@ type postType = {
 
 async function getData() {
   try {
-    const response = await fetch(
-      `https://next-hungry-menu.vercel.app/api/teams`
-    );
+    const response = await fetch(`${process.env.API_HOST}/teams`);
     return response.json();
   } catch (error) {
     console.log(error);

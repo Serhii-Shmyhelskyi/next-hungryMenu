@@ -123,6 +123,7 @@ const HeaderButton: FC = () => {
             {session.data ? (
               <Link href="/profile">
                 <img
+                  className={styles.menuAuthImg}
                   style={{ width: "40px", borderRadius: "50%" }}
                   src={
                     session.data?.user?.image
@@ -135,6 +136,7 @@ const HeaderButton: FC = () => {
             ) : (
               <Link href="/signin">
                 <img
+                  className={styles.menuAuthImg}
                   style={{ width: "40px", borderRadius: "50%" }}
                   src="./images/logIn.png"
                   alt="menuAuthImg"

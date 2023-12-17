@@ -16,7 +16,15 @@ import classnames from "classnames";
 const Booking: FC = () => {
   const [visible, setVisible] = useState(true);
   const [inputValid, setInputValid] = useState("");
-  const [allDateSt, setAllDateSt] = useState<any>({});
+  const [allDateSt, setAllDateSt] = useState({
+    booking: "",
+    name: "",
+    email: "",
+    phone: "",
+    people: "",
+    date: "",
+    time: "",
+  });
 
   let handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -26,6 +34,7 @@ const Booking: FC = () => {
     const allData: any = {
       // if local
       // id: Date.now(),
+      booking: "booking",
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
@@ -183,7 +192,7 @@ const Booking: FC = () => {
             people
           </h2>
           <div>
-            <img src="/images/gallery-6.jpg" alt="thank" />
+            <img src="/images/gallery-6-big.jpg" alt="thank" />
           </div>
 
           <Link href="/">

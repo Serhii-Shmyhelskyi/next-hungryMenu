@@ -12,7 +12,7 @@ type postType = {
 
 async function getData() {
   try {
-    const response = await fetch(`${process.env.API_HOST}/teams`);
+    const response = await fetch(`/api/teams`);
     return response.json();
   } catch (error) {
     console.log(error);

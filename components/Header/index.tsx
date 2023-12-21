@@ -4,13 +4,11 @@ import styles from "./header.module.scss";
 
 const Header: FC = () => {
   return (
-    <>
-      <header>
-        <div className={styles.header__innerMenu}>
-          <HeaderButton />
-        </div>
-      </header>
-    </>
+    <header>
+      <div className={styles.header__innerMenu}>
+        <HeaderButton />
+      </div>
+    </header>
   );
 };
 

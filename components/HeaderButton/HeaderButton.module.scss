@@ -59,22 +59,6 @@
 
 .headerMenu_btnOpen {
   display: none;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  width: 40px;
-  cursor: pointer;
-  padding: 10px 5px 0 0;
-  transition: transform 0.1s ease-in-out;
-  &:active {
-    transform: skewY(15deg);
-  }
-  span {
-    display: block;
-    height: 3px;
-    margin-bottom: 10px;
-    background-color: #e8c300;
-  }
 }
 
 @media (max-width: 1290px) {
@@ -94,7 +78,7 @@
 
   .headerMenu__content {
     display: block;
-    position: fixed;
+    position: absolute;
     background-color: #cbc9c1;
     transform: translateX(-500px);
     top: 0;
@@ -164,7 +148,7 @@
 
   .headerMenu_btnOpen {
     display: block;
-    position: fixed;
+    position: absolute;
     right: 20px;
     top: 20px;
     width: 40px;
@@ -183,7 +167,7 @@
   }
 
   .headerMenu_btnClose {
-    position: fixed;
+    position: absolute;
     right: 23px;
     top: 40px;
     width: 40px;

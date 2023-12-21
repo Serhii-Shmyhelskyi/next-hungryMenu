@@ -59,7 +59,7 @@
 
 .headerMenu_btnOpen {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 20px;
   width: 40px;
@@ -94,7 +94,7 @@
 
   .headerMenu__content {
     display: block;
-    position: absolute;
+    position: fixed;
     background-color: #cbc9c1;
     transform: translateX(-500px);
     top: 0;
@@ -164,7 +164,7 @@
 
   .headerMenu_btnOpen {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
     width: 40px;
@@ -183,7 +183,7 @@
   }
 
   .headerMenu_btnClose {
-    position: absolute;
+    position: fixed;
     right: 23px;
     top: 40px;
     width: 40px;

@@ -6,7 +6,6 @@ import React, { useState, FC } from "react";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 
-import { pageUp } from "../../function/function";
 import { dataMenu1, dataMenu2 } from "../data/data";
 
 const HeaderButton: FC = () => {
@@ -16,7 +15,6 @@ const HeaderButton: FC = () => {
     window.matchMedia("(max-width: 950px)").matches && toggleMenu
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
-    pageUp();
   };
 
   const pathname = usePathname();

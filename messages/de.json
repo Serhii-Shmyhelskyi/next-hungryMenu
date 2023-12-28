@@ -1,0 +1,58 @@
+{
+  "Home": {
+    "title": "HUNGRIGE MENSCHEN",
+    "restaurant": "restaurant",
+    "menu": "SPEISEKARTE",
+    "booktable": "BUCHTISCH"
+  },
+  "Team": {
+    "title": "UNSER TEAM"
+  },
+  "About": {
+    "title": "ÜBER UNS",
+    "title2": "Das Restaurant Milka ist einzigartig und vereint Nordisches und Alpines, Modernes und Klassisches auf eine Art und Weise wie ein rebellisches Kind, das nach seinen eigenen Vorstellungen nach Perfektion strebt.",
+    "text": "Unsere Vision basiert auf der Bereitstellung regionaler saisonaler Zutaten, inspiriert von der alpinen Umgebung und Traditionen. Da die Jahreszeiten in den Alpen von Natur aus kurz und intensiv sind, wollten wir diese Aspekte in unserer gesamten Speisekarte widerspiegeln, ohne dabei Kompromisse bei der Qualität unserer Zutaten einzugehen."
+  },
+
+  "dataMenu1": {
+    "home": {
+      "href": "/de",
+      "text": "HEIM"
+    },
+    "about": {
+      "href": "/de/about",
+      "text": "ABOUT"
+    },
+    "team": {
+      "href": "/de/team",
+      "text": "UM"
+    },
+    "booking": {
+      "href": "/de/booking",
+      "text": "BUCHUNG"
+    }
+  },
+  "dataMenu2": {
+    "menu": {
+      "href": "/de/menu",
+      "text": "SPEISEKARTE"
+    },
+    "gallery": {
+      "href": "/de/gallery",
+      "text": "GALERIE"
+    },
+    "contact": {
+      "href": "/de/contact",
+      "text": "KONTAKT"
+    },
+    "signIn": {
+      "text": "ANMELDEN"
+    },
+    "profile": {
+      "text": "PROFIL"
+    },
+    "signOut": {
+      "text": "ABMELDEN"
+    }
+  }
+}

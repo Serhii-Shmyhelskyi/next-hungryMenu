@@ -10,7 +10,7 @@ const GoogleButton = () => {
     <button
       className={styles.google__button}
       onClick={() => signIn("google", { callbackUrl })}>
-      <img src="./images/googleIcon.png" alt="google" />
+      <img src="/images/googleIcon.png" alt="google" />
     </button>
   );
 };

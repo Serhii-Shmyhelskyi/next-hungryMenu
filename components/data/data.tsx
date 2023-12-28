@@ -74,27 +74,27 @@ export const dailyMenuarr = [
 ];
 
 export const photoArr = [
-  "images/gallery-1-big.jpg",
-  "images/gallery-2-big.jpg",
-  "images/gallery-3-big.jpg",
-  "images/gallery-4-big.jpg",
-  "images/gallery-5-big.jpg",
-  "images/gallery-6-big.jpg",
-  "images/gallery-7-big.jpg",
-  "images/gallery-8-big.jpg",
+  "/images/gallery-1-big.jpg",
+  "/images/gallery-2-big.jpg",
+  "/images/gallery-3-big.jpg",
+  "/images/gallery-4-big.jpg",
+  "/images/gallery-5-big.jpg",
+  "/images/gallery-6-big.jpg",
+  "/images/gallery-7-big.jpg",
+  "/images/gallery-8-big.jpg",
 ];
 
 export const dataMenu1 = [
-  { href: "/", text: "HOME", urlIcon: "./images/homeIcon.png" },
-  { href: "/about", text: "ABOUT", urlIcon: "./images/aboutIcon.png" },
-  { href: "/team", text: "TEAM", urlIcon: "./images/teamIcon.png" },
-  { href: "/booking", text: "BOOKING", urlIcon: "./images/bookingIcon.png" },
+  { href: "/en", text: "HOME" },
+  { href: "/en/about", text: "ABOUT" },
+  { href: "/en/team", text: "TEAM" },
+  { href: "/en/booking", text: "BOOKING" },
 ];
 
 export const dataMenu2 = [
-  { href: "/menu", text: "MENU", urlIcon: "./images/menuIcon.png" },
-  { href: "/gallery", text: "GALLERY", urlIcon: "./images/galleryIcon.png" },
-  { href: "/contact", text: "CONTACT", urlIcon: "./images/contactIcon.png" },
+  { href: "/en/menu", text: "MENU" },
+  { href: "/en/gallery", text: "GALLERY" },
+  { href: "/en/contact", text: "CONTACT" },
 ];
 
 export const users = [

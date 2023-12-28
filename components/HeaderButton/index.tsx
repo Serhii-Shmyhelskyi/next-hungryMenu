@@ -6,9 +6,21 @@ import React, { useState, FC } from "react";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 
-import { dataMenu1, dataMenu2 } from "../data/data";
+interface HeaderButtonProps {
+  combinedArray1: { href: string; text: string }[];
+  combinedArray2: { href: string; text: string }[];
+  signInText: string;
+  profile: string;
+  signOutText: string;
+}
 
-const HeaderButton: FC = () => {
+const HeaderButton: FC<HeaderButtonProps> = ({
+  combinedArray1,
+  combinedArray2,
+  signInText,
+  profile,
+  signOutText,
+}) => {
   const [toggleMenu, setToggleMenu] = useState(true);
   const AllActive = (toggleMenu: boolean) => {
     setToggleMenu((actualTogleMenu) => !actualTogleMenu);
@@ -32,7 +44,7 @@ const HeaderButton: FC = () => {
         })}>
         <nav className={styles.headerMenu__listWraper}>
           <ul className={styles.headerMenu__list}>
-            {dataMenu1.map((obj, i) => {
+            {combinedArray1.map((obj, i) => {
               return (
                 <li
                   key={i}
@@ -56,7 +68,7 @@ const HeaderButton: FC = () => {
 
         <nav className={styles.headerMenu__listWraper}>
           <ul className={styles.headerMenu__list}>
-            {dataMenu2.map((obj, i) => {
+            {combinedArray2.map((obj, i) => {
               return (
                 <li
                   key={i}
@@ -86,7 +98,7 @@ const HeaderButton: FC = () => {
                     [styles.headerMenu__listActive]: isActiveMenu("/profile"),
                   })}
                   href="/profile">
-                  PROFILE
+                  {profile}
                 </Link>
               </li>
             )}
@@ -98,7 +110,7 @@ const HeaderButton: FC = () => {
                   })}
                   href="#"
                   onClick={() => signOut({ callbackUrl: "/" })}>
-                  SIGN OUT
+                  {signOutText}
                 </Link>
               </li>
             ) : (
@@ -113,7 +125,7 @@ const HeaderButton: FC = () => {
                   })}
                   onClick={() => AllActive(toggleMenu)}
                   href="/signin">
-                  SIGN IN
+                  {signInText}
                 </Link>
               </li>
             )}
@@ -126,7 +138,7 @@ const HeaderButton: FC = () => {
                   src={
                     session.data?.user?.image
                       ? String(session.data?.user?.image)
-                      : "./images/user.gif"
+                      : "/images/user.gif"
                   }
                   alt="menuAuthImg"
                 />
@@ -136,13 +148,31 @@ const HeaderButton: FC = () => {
                 <img
                   className={styles.menuAuthImg}
                   style={{ width: "40px", borderRadius: "50%" }}
-                  src="./images/logIn.png"
+                  src="/images/logIn.png"
                   alt="menuAuthImg"
                 />
               </Link>
             )}
           </ul>
         </nav>
+        <div>
+          <button className={styles.home__button}>
+            <Link
+              className={styles.home__buttonLink}
+              href={`/en/${pathname.slice(4, pathname.length)}`}
+              locale="en">
+              en
+            </Link>
+          </button>
+          <button className={styles.home__button}>
+            <Link
+              className={styles.home__buttonLink}
+              href={`/de/${pathname.slice(4, pathname.length)}`}
+              locale="de">
+              de
+            </Link>
+          </button>
+        </div>
       </div>
 
       <div

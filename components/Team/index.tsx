@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./team.module.scss";
+import { getTranslations } from "next-intl/server";
 
 type postType = {
   id: number;
@@ -20,6 +21,8 @@ async function getData() {
 }
 
 export default async function Team() {
+  const t = await getTranslations("Team");
+
   const posts = await getData();
 
   return (
@@ -30,7 +33,7 @@ export default async function Team() {
         backgroundSize: "cover",
       }}>
       <div className="container">
-        <h1>OUR TEAM</h1>
+        <h1>{t("title")}</h1>
         <div className={styles.team__wraper}>
           {posts.map((post: postType) => (
             <Link

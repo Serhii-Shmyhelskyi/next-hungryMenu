@@ -1,0 +1,57 @@
+{
+  "Home": {
+    "title": "HUNGRY PEOPLE",
+    "restaurant": "restaurant",
+    "menu": "MENU",
+    "booktable": "BOOK TABLE"
+  },
+  "Team": {
+    "title": "OUR TEAM"
+  },
+  "About": {
+    "title": "ABOUT US",
+    "title2": "Restaurant Milka is one of a kind, merging Nordic & Alpine, modern & classic, in a way like a rebellious kid striving for perfection on their own terms.",
+    "text": "Our vision is founded on providing regional seasonal ingredients, inspired by the Alpine surroundings and traditions. The Alpine seasons are inherently short and intense, therefore we wanted to portray these aspects throughout our menu, while never compromising on the quality of our ingredients."
+  },
+  "dataMenu1": {
+    "home": {
+      "href": "/en",
+      "text": "HOME"
+    },
+    "about": {
+      "href": "/en/about",
+      "text": "ABOUT"
+    },
+    "team": {
+      "href": "/en/team",
+      "text": "TEAM"
+    },
+    "booking": {
+      "href": "/en/booking",
+      "text": "BOOKING"
+    }
+  },
+  "dataMenu2": {
+    "menu": {
+      "href": "/en/menu",
+      "text": "MENU"
+    },
+    "gallery": {
+      "href": "/en/gallery",
+      "text": "GALLERY"
+    },
+    "contact": {
+      "href": "/en/contact",
+      "text": "CONTACT"
+    },
+    "signIn": {
+      "text": "SIGN IN"
+    },
+    "profile": {
+      "text": "PROFILE"
+    },
+    "signOut": {
+      "text": "SIGN OUT"
+    }
+  }
+}

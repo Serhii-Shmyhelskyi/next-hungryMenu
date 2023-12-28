@@ -28,8 +28,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/index.js",
-    "app/loading.tsx",
-    "components/Menu/DrinkMenu/index.tsx"
+    "app/[locale]/loading.tsx",
+    "components/Menu/DrinkMenu/index.tsx",
+    "app/i18.js",
+    "components/HeaderButton/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -54,12 +54,12 @@ const Gallery: FC = () => {
           <div className={styles.private__inner}>
             <img
               className={styles.private__imagesImg}
-              src="images/private-1.png"
+              src="/images/private-1.png"
               alt="Private"
             />
             <img
               className={styles.private__imagesImg}
-              src="images/private-2.png"
+              src="/images/private-2.png"
               alt="Private"
             />
           </div>

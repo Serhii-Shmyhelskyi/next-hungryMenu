@@ -22,7 +22,6 @@ const Contact: FC = () => {
     phone: "",
     messege: "",
   });
-  console.log(allDate);
 
   let handleSubmit = async (e: any) => {
     e.preventDefault();

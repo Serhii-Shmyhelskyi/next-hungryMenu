@@ -2,11 +2,18 @@ import type { Metadata } from "next";
 
 import { Roboto } from "next/font/google";
 
-import "./globals.scss";
+import "../globals.scss";
 
-import { Header } from "../components/Header/index";
-import { Footer } from "../components/Footer/index";
-import { Providers } from "../components/Providers";
+import { Header } from "../../components/Header/index";
+import { Footer } from "../../components/Footer/index";
+import { Providers } from "../../components/Providers";
+import { ReactNode } from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -25,13 +32,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LocaleLayout({ children, params: { locale } }: Props) {
+  // Enable static rendering
+  unstable_setRequestLocale(locale);
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang={locale} className={roboto.className}>
       <body>
         <Providers>
           <Header />

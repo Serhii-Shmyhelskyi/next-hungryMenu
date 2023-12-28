@@ -1,7 +1,10 @@
 import Link from "next/link";
 import styles from "./home.module.scss";
 
+import { useTranslations } from "next-intl";
+
 export default function Home() {
+  const t = useTranslations("Home");
   return (
     <>
       <div className={styles.home}>
@@ -12,7 +15,7 @@ export default function Home() {
             <div className={styles.home__logo}>
               <img
                 className={styles.home__logoImg}
-                src="images/home-logo.png"
+                src="/images/home-logo.png"
               />
             </div>
             <div className={styles.home__innerCenter}>
@@ -22,18 +25,18 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.home__boxCenter}>
-                <p className={styles.home__suptitle}>RESTAURANT</p>
-                <h1 className={styles.home__title}>HUNGRY PEOPLE</h1>
+                <p className={styles.home__suptitle}>{t("restaurant")}</p>
+                <h1 className={styles.home__title}>{t("title")}</h1>
                 <div className={styles.heder__titleBottom}></div>
                 <div className={styles.home__buttons}>
                   <button className={styles.home__button}>
                     <Link className={styles.home__buttonLink} href="/booking">
-                      BOOK TABLE
+                      {t("booktable")}
                     </Link>
                   </button>
                   <button className={styles.home__button}>
                     <Link className={styles.home__buttonLink} href="/menu">
-                      MENU
+                      {t("menu")}
                     </Link>
                   </button>
                 </div>
@@ -47,7 +50,7 @@ export default function Home() {
                       target="_blank">
                       <img
                         className={styles.home__mediaImg}
-                        src="images/facebook.svg"
+                        src="/images/facebook.svg"
                         alt="facebook"
                       />
                     </a>
@@ -57,7 +60,7 @@ export default function Home() {
                       target="_blank">
                       <img
                         className={styles.home__mediaImg}
-                        src="images/twitter.svg"
+                        src="/images/twitter.svg"
                         alt="twitter"
                       />
                     </a>
@@ -67,7 +70,7 @@ export default function Home() {
                       target="_blank">
                       <img
                         className={styles.home__mediaImg}
-                        src="images/instagram.svg"
+                        src="/images/instagram.svg"
                         alt="instagram"
                       />
                     </a>

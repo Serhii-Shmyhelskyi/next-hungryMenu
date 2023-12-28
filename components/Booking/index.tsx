@@ -173,7 +173,7 @@ const Booking: FC = () => {
               <div className={styles.book__images}>
                 <img
                   className={styles.book__imagesImg}
-                  src="images/book.png"
+                  src="/images/book.png"
                   alt="bookImg"
                 />
               </div>

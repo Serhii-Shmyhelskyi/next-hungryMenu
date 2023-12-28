@@ -61,7 +61,7 @@
   display: none;
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1435px) {
   .headerMenu__list {
     .menuAuthImg {
       margin: 10px 0 0 50px;
@@ -115,7 +115,6 @@
           color: #a88d07;
         }
       }
-
       @media (hover: hover) {
         li:hover {
           background-color: darken(#d6d8d8dc, 2%);
@@ -191,6 +190,30 @@
       height: 4px;
       background-color: #e8c300;
       transform: rotate(-45deg);
+    }
+  }
+}
+
+.header__translateWrapper {
+  margin-left: 26px;
+  .header__translateButtonActive {
+    background-color: #7a7a7a;
+    color: #fff;
+  }
+  .header__translateButton {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #e8c300;
+    border-radius: 50%;
+    &:active {
+      background-color: rgb(69, 195, 69);
+      border: 2px solid #0f9327;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: #7a7a7a;
+        color: #fff;
+      }
     }
   }
 }

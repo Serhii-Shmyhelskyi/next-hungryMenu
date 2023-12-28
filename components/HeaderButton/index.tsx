@@ -31,6 +31,9 @@ const HeaderButton: FC<HeaderButtonProps> = ({
 
   const pathname = usePathname();
 
+  let pathnameEn = `/en/${pathname.slice(4, pathname.length)}`;
+  let pathnameDe = `/de/${pathname.slice(4, pathname.length)}`;
+
   let isActiveMenu = (obj: string) => pathname === obj;
 
   const session = useSession();
@@ -155,19 +158,27 @@ const HeaderButton: FC<HeaderButtonProps> = ({
             )}
           </ul>
         </nav>
-        <div>
-          <button className={styles.home__button}>
+        <div className={styles.header__translateWrapper}>
+          <button
+            className={classnames({
+              [styles.header__translateButton]: true,
+              [styles.header__translateButtonActive]: pathname.includes("/en"),
+            })}>
             <Link
               className={styles.home__buttonLink}
-              href={`/en/${pathname.slice(4, pathname.length)}`}
+              href={pathnameEn}
               locale="en">
               en
             </Link>
           </button>
-          <button className={styles.home__button}>
+          <button
+            className={classnames({
+              [styles.header__translateButton]: true,
+              [styles.header__translateButtonActive]: pathname.includes("/de"),
+            })}>
             <Link
               className={styles.home__buttonLink}
-              href={`/de/${pathname.slice(4, pathname.length)}`}
+              href={pathnameDe}
               locale="de">
               de
             </Link>
